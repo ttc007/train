@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}Event Detail{% endblock %}
+{% block extrastylesheet %}
+<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/page_detail.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/event_detail.css">
+{% endblock %}
+{% block extrascript %}
+<script type="text/javascript" src = "{{ STATIC_URL }}assets/js/jquery.countdown.js"></script>
+<script type="text/javascript" src = "{{ STATIC_URL }}assets/websites/js/event_detail.js"></script>
+{% endblock %}
+{% block main_content %} 
+{% if event %}
+<div class="page-top">
+    <div class="page-header-img-full">
+        <img src="{{ MEDIA_URL }}{{ event.image }}" width="100%">
+        <div class="page-caption">
+            <div class="container">
+                <div class="page-title-detail row">
+                    <div class="page-header-info event-class">
+                        <div class="countdown-coursel future-event countdown" style="display: none;">
+                            <div class="hidden start_datetime">{{event.start_datetime | date:"Y/m/d H:i"}}</div>
+                            <div class="hidden end_datetime">{{event.end_datetime | date:"Y/m/d H:i"}}</div>
+                            <div class="countdown-content">
+                                <div class="time days flip">
+                                    <span class="count current">00</span>
+                                    <span class="label">{% trans "eventpage.days" %}</span>
+                                </div>
+                                <div class="time hours flip">
+                                    <span class="count current">00</span>
+                                    <span class="label">{% trans "eventpage.hours" %}</span>
+                                </div>
+                                <div class="time minutes flip">
+                                    <span class="count current">00</span>
+                                    <span class="label">{% trans "eventpage.minutes" %}</span>
+                                </div>
+                                <div class="time seconds flip">
+                                    <span class="count current">00</span>
+                                    <span class="label">{% trans "eventpage.seconds" %}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="label-event-header finished-event" style="display: none;">
+                            <button class="lable-btn big-font-size">{% trans "eventpage.finished" %}</button>
+                        </div> -->
+                        <div class="label-event-header current-event" style="display: none;">
+                            <button class="lable-btn big-font-size">{% trans "eventpage.current" %}</button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 event-info" align="center">
+                        <p class="big-font-size">{{event.name}}</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="custom-icons" align="center">
+                            <div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>      
+    
+<div class="container div-content-layer">
+    <div class="div-content" align="center">
+        {{event.content | safe}}
+    </div>
+    <hr class="hr-custom">
+</div>
+{% endif %}
+
+{% if other_events %}
+<div class="container">
+    <div class="block-post-involved">
+        <div class="row block-post-title">
+            <div class="col-md-6 col-md-6-custom">
+                <h4>{% trans "eventpage.other_event" %}</h4>
+            </div>
+            <div class="col-md-6 col-md-6-custom">
+                <a class="btn button-all btn-custom-style btn-custom-style-kids" href="{% url 'events' %}" role="button">{% trans "eventpage.btn.all_event" %}<span class="glyphicon glyphicon-menu-right"></span></a>
+            </div>
+        </div>
+        <div class="row custom-other-exp">
+            {% for event in other_events %}
+            <div class="item col-md-4 col-xs-12 custom-promotion other-item">
+                <div class="style-post">
+                    <span><a href="/events/{{event.id}}/detail/" class="thumbnail thumbnail-custom"><img src="{{ MEDIA_URL }}{{ event.image }}" width="100%"></a></span>
+                    <a class="title-post" href="/events/{{event.id}}/detail/">{{event.name}}</a>
+                    <p class="text-limit-rows">{{event.short_description}}</p> <a class="view-detail" href="/events/{{event.id}}/detail/">{% trans "btn.view_detail" %}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

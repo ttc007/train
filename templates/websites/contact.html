@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}Contact - Liên hệ{% endblock %}
+{% block extrastylesheet %}
+<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/contact.css">
+
+ <style type="text/css">  
+
+</style>
+{% endblock %}
+{% block extrascript %}
+<script type="text/javascript" src="{{ STATIC_URL }}assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src = "{{ STATIC_URL }}assets/websites/js/contact.js"></script>
+
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+	<!-- FAQs PAGE DESCRIPTION -->
+	<div class="page-top">
+		<div class="page-header-img">
+		    <div>
+		        <img src="{{ STATIC_URL }}assets/websites/images/contact-header.jpg" width="100%">
+		    </div>
+		    <div class="page-title" align="center">
+		        <div class="col-md-12">
+		            <p class="page-title-text">{% trans "contact.header.title" %}</p>
+		        </div>
+		    </div>
+		</div>
+	    <div align="center" class="page-header-text">
+	        <div class="form-title">
+	            <p class="text-description page_description">{% trans "contact.header.description" %}</p>
+	        </div>
+	    </div>
+	</div>
+	<!-- LINE -->
+	<hr class="hr-custom">
+	<!-- CONTACT FORM #TO DO CUSTOM-->
+	<div id="message_success" style="display: none;"><div class="alert alert-success message-success">{% trans "contact.message_success" %}</div></div>
+	<div id="message_error" style="display: none;"><div class="alert alert-danger message-success ">{% trans "contact.message_error" %}
+		<br>
+		<div id="errors_detail"></div>
+	</div></div>
+	
+	<div class="center-div form-group" align="center">
+
+		<form id="form_contact" class="form-contact" method="POST">
+		{% csrf_token %}
+			<div class="col-md-6">
+				<div class="col-md-12 col-xs-12">
+					<label>{% trans "contact.lable.title.name" %} </label>
+					<input id="id_name" name="name" value="{{ name }}" class="form-control form-control-custom input-contact" type="text" required>
+				</div>
+					
+				<div class="col-md-12 col-xs-12">
+					<label>{% trans "contact.lable.title.email" %} </label>
+					<input id="id_email" name="email" value="{{ email }}" class="form-control form-control-custom input-contact" type="email" required>
+				</div>
+				<div class="col-md-12 col-xs-12">
+					<label>{% trans "contact.lable.title.phone" %} </label>
+					<input id="id_phone" name="phone" value="{{ phone }}" class="form-control form-control-custom input-contact" type="text" required>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-12 col-xs-12">
+					<label>{% trans "contact.lable.title.subject" %} </label>
+					<input id="id_subject" name="subject" value="{{ subject }}" class="form-control form-control-custom input-contact" type="text" required>
+				</div>
+				<div class="col-md-12 col-xs-12">
+					<label>{% trans "contact.lable.title.message" %} </label>
+					<textarea id="id_message" name="message" value="{{ message }}" class="form-control form-control-custom input-contact" rows="5"></textarea>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-12 col-xs-12">
+					<label>Captcha </label>
+					{{ form.captcha }}
+				</div>
+			</div>
+			<div class="col-md-12 col-xs-12" align="center">
+				<button id="submitbutton" type="button" class="btn-custom-style btn-custom-style-experiences">{% trans "contact.btn.send" %} <span class="glyphicon glyphicon-menu-right"></span></button>
+			</div>
+			<div id="WaitDialog" class="wait-dialog" align="center">
+		        <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+		        <p>Please wait</p>
+		    </div>
+		
+			
+		</form>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-xs-12 map-custom.div" align="center">
+		    <iframe class="map-custom" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.562563375484!2d108.22225385096235!3d16.03627114452417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219e8cb37e161%3A0xb2f5c4a784d34c60!2zVHJ1bmcgdMOibSBHaeG6o2kgdHLDrSBQaOG7qWMgaOG7o3AgSGVsaW8gQ2VudGVy!5e0!3m2!1sen!2s!4v1488335913354" width="100%"  frameborder="0"></iframe>
+		</div>
+	</div>
+</div>
+	
+{% endblock %}

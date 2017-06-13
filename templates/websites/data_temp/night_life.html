@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}Night life - Chợ đêm{% endblock %}
+{% block extrastylesheet %}
+<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/night_life.css">
+{% endblock %}
+{% block extrascript %}
+<script type="text/javascript" src = "{{ STATIC_URL }}assets/websites/js/night_life.js"></script>
+{% endblock %}
+{% block main_content %}
+<div class="page-top">
+    <div class="page-header-img">
+        <div>
+            <img src="{{ STATIC_URL }}assets/websites/images/night-life-header.png" width="100%">
+        </div>
+    </div>
+    <div class="page-caption">
+        <div class="container">
+            <div class="nl-page-info">
+                <div class="nl-page-title">
+                    <p class="big-font-size">NHỮNG TRẢI NGHIỆM TUYỆT VỜI CÙNG ẨM THỰC VÀ GIẢI TRÍ</p>
+                    <hr class="line-hr">
+                </div>
+                <div class="nl-page-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container">
+    <div class="layer-1">
+        <div class="div-align-center">
+            <p class="first-text-lg">Corem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.</p>
+        </div>
+    </div>
+    <div class="layer-2">
+        <div class="nl-section-title">
+            <p class="big-font-size nightlife-name">NHỮNG THỨC UỐNG ĐƯỢC PHA CHẾ</p>
+            <hr class="line-hr">
+        </div>
+        <div class="div-align-center before-comment">
+            <p>Corem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.</p>
+        </div>
+        <div class="comment-img-wrapper imgHalf noCaption animation-element">
+            <div class="comment-img-half">
+                <img src="{{ STATIC_URL }}assets/websites/images/night_life_1.png" width="100%">
+            </div>
+            <div class="comment-caption-special">
+                <div class="scs-content clearfix">
+                    <div id="comment-coursel" class="carousel slide carousel-custom" data-ride="carousel">
+                        <div class="col-md-12 carousel-indicators-div">
+                            <ol class="carousel-indicators carousel-indicators-custom">
+                                <li data-target="#comment-coursel" data-slide-to="0" class="active"></li>
+                                <li data-target="#comment-coursel" data-slide-to="1"></li>
+                                <li data-target="#comment-coursel" data-slide-to="2"></li>
+                            </ol>
+                        </div>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active comment-text">
+                                <div class="col-xs-5 col-md-3 comment-left">
+                                    <p class="comment-title">Bình luận về chợ đêm</p>
+                                    <span class="comment-author">Martin</span>
+                                </div>
+                                <div class="col-xs-7 col-md-6 comment-right">
+                                    <p>“Hạnh phúc không phải là điều bạn để dành đến tương lai, mà là điều bạn nhắm đến cho hiện tại.”</p>
+                                </div>
+                            </div>
+                            <div class="item comment-text">
+                                <div class="col-xs-5 col-md-3 comment-left">
+                                    <p class="comment-title">Night life</p>
+                                    <span class="comment-author">Lennnnnn</span>
+                                </div>
+                                <div class="col-xs-7 col-md-6 comment-right">
+                                    <p>“Ý thức về cái tôi cá nhân là vấn đề của không chỉ nhân vật chính, mà còn là băn khoăn của một lớp người trong xã hội không tìm ra lối thoát cho chính mình.”</p>
+                                </div>
+                            </div>
+                            <div class="item comment-text">
+                                <div class="col-xs-5 col-md-3 comment-left">
+                                    <p class="comment-title"> Night life</p>
+                                    <span class="comment-author">Mediaaa</span>
+                                </div>
+                                <div class="col-xs-7 col-md-6 comment-right">
+                                    <p>“Đừng bao giờ hối tiếc những gì đã xảy ra trong quá khứ, vì thời điểm ấy, đó chính xác là những gì bạn muốn.”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div-align-center after-comment">
+            <p>Corem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.</p>
+        </div>
+    </div>
+    <div class="layer-3">
+        <div class="nl-section-title">
+            <p class="big-font-size nightlife-name">TRONG KHÔNG KHÍ ÂM NHẠC ĐẦY SÔI ĐỘNG</p>
+            <hr class="line-hr">
+        </div>
+        <div class="div-align-center before-comment">
+            <p>Corem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.</p>
+        </div>
+        <div class="comment-img-wrapper imgHalf noCaption animation-element">
+            <div class="comment-img-half">
+                <img src="{{ STATIC_URL }}assets/websites/images/night_life_1.png" width="100%">
+            </div>
+            <div class="comment-caption-special">
+                <div class="scs-content clearfix">
+                    <div id="comment-coursel-1" class="carousel slide carousel-custom" data-ride="carousel">
+                        <div class="col-md-12 carousel-indicators-div">
+                            <ol class="carousel-indicators carousel-indicators-custom">
+                                <li data-target="#comment-coursel-1" data-slide-to="0" class="active"></li>
+                                <li data-target="#comment-coursel-1" data-slide-to="1"></li>
+                                <li data-target="#comment-coursel-1" data-slide-to="2"></li>
+                            </ol>
+                        </div>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active comment-text">
+                                <div class="col-xs-5 col-md-3 comment-left">
+                                    <p class="comment-title">Bình luận về chợ đêm</p>
+                                    <span class="comment-author">Martin</span>
+                                </div>
+                                <div class="col-xs-7 col-md-6 comment-right">
+                                    <p>“Hạnh phúc không phải là điều bạn để dành đến tương lai, mà là điều bạn nhắm đến cho hiện tại.”</p>
+                                </div>
+                            </div>
+                            <div class="item comment-text">
+                                <div class="col-xs-5 col-md-3 comment-left">
+                                    <p class="comment-title">Night life</p>
+                                    <span class="comment-author">Lennnnnn</span>
+                                </div>
+                                <div class="col-xs-7 col-md-6 comment-right">
+                                    <p>“Ý thức về cái tôi cá nhân là vấn đề của không chỉ nhân vật chính, mà còn là băn khoăn của một lớp người trong xã hội không tìm ra lối thoát cho chính mình.”</p>
+                                </div>
+                            </div>
+                            <div class="item comment-text">
+                                <div class="col-xs-5 col-md-3 comment-left">
+                                    <p class="comment-title"> Night life</p>
+                                    <span class="comment-author">Mediaaa</span>
+                                </div>
+                                <div class="col-xs-7 col-md-6 comment-right">
+                                    <p>“Đừng bao giờ hối tiếc những gì đã xảy ra trong quá khứ, vì thời điểm ấy, đó chính xác là những gì bạn muốn.”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div-align-center after-comment">
+            <p>Corem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- DOWNLOAD APP BANNER -->
+    <div class="app-banner">
+        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+    </div>
+</div>
+{% endblock %}

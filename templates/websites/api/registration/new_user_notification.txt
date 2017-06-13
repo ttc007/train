@@ -1,0 +1,8 @@
+Hello {{user.first_name}} {{user.last_name}}, you have registered for a Helio center.
+
+Use this account email to sign in to 
+helio.vn.com on your computer or mobile device to enjoy a more personalized experience.
+
+Account Email : {{user.email}}
+
+If this account was set up in error, or if you do not wish to have a Helio account, please call (0236) 3 543-0864 for assistance. Guests under age 18 must have parent or guardian permission to call.

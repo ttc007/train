@@ -1,0 +1,301 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-23 03:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+# START MAIN MENU
+msgid "menu.product"
+msgstr "SẢN PHẨM"
+
+msgid "menu.night_life"
+msgstr "CHỢ ĐÊM"
+
+msgid "menu.powercard"
+msgstr "POWERCARD"
+
+msgid "menu.event"
+msgstr "SỰ KIỆN"
+
+msgid "menu.promotion"
+msgstr "KHUYẾN MÃI"
+
+msgid "menu.faq"
+msgstr "HỎI ĐÁP"
+
+msgid "menu.helio_photos"
+msgstr "HÌNH ẢNH"
+# END MAIN MENU
+
+# START SUB MENU
+msgid "menu.submenu.play"
+msgstr "Helio Play"
+
+msgid "menu.submenu.kids"
+msgstr "Helio Kids"
+
+msgid "menu.submenu.night_life"
+msgstr "Chợ Đêm"
+
+msgid "menu.submenu.coffee"
+msgstr "Coffee & Bakery"
+
+msgid "menu.submenu.ortherproduct"
+msgstr "Sản phẩm khác"
+
+msgid "menu.submenu.redemption_store"
+msgstr "Quầy đổi quà"
+# END SUB MENU
+
+# START BUTTON
+msgid "btn.click_now"
+msgstr "Tìm hiểu ngay"
+
+msgid "btn.view_all"
+msgstr "Xem tất cả"
+
+msgid "btn.view_more"
+msgstr "Hiển thị thêm"
+
+msgid "btn.view_detail"
+msgstr "Xem chi tiết"
+# END BUTTON
+
+# START HOME PAGE
+msgid "homepage.title.section.game"
+msgstr "HỆ THỐNG VUI CHƠI & GIẢI TRÍ"
+
+msgid "homepage.title.section.redemption_store"
+msgstr "TÌM HIỂU HỆ THỐNG ĐỔI QUÀ TẠI QUẦY ĐỔI QUÀ"
+
+msgid "homepage.title.section.powercard"
+msgstr "THẺ POWERCARD SỬ DỤNG TẠI HELIO CENTER NHƯ THẾ NÀO? "
+
+msgid "homepage.title.section.event"
+msgstr "SỰ KIỆN HELIO CENTER"
+
+msgid "homepage.title.section.entertaiment"
+msgstr "TRUNG TÂM VUI CHƠI GIẢI TRÍ TẠI ĐÀ NẴNG"
+
+msgid "homepage.text.night_life"
+msgstr "CHỢ ĐÊM"
+
+msgid "homepage.text.play"
+msgstr "PLAY"
+
+msgid "homepage.text.kids"
+msgstr "KIDS"
+
+msgid "homepage.text.coffee"
+msgstr "COFFEE"
+
+# END HOME PAGE
+
+# START FAQs REDEMPTION STORE
+msgid "redemption_store.title.section.faq"
+msgstr "NHỮNG CÂU HỎI THƯỜNG GẶP"
+# END FAQs REDEMPTION STORE
+
+# START FAQs POWERCARD
+msgid "powercard.title.section.faq"
+msgstr "NHỮNG CÂU HỎI THƯỜNG GẶP"
+# END FAQs POWERCARD
+
+# START POWERCARD
+msgid "powercard.btn.view_full"
+msgstr "XEM ĐẦY ĐỦ"
+# END POWERCARD
+
+
+# START EXPERIENCE DETAIl
+msgid "experiencepage.btn.all_experience" 
+msgstr "TẤT CẢ TRẢI NGHIỆM"
+
+msgid "experiencepage.other_experience" 
+msgstr "TRẢI NGHIỆM KHÁC"
+# END EXPERIENCE DETAIl
+
+# START EVENT
+msgid "eventpage.title.all_event" 
+msgstr "TẤT CẢ CÁC SỰ KIỆN"
+
+msgid "eventpage.btn.all_event" 
+msgstr "TẤT CẢ SỰ KIỆN"
+
+msgid "eventpage.other_event" 
+msgstr "SỰ KIỆN KHÁC"
+
+msgid "eventpage.days" 
+msgstr "NGÀY"
+
+msgid "eventpage.hours" 
+msgstr "GIỜ"
+
+msgid "eventpage.minutes" 
+msgstr "PHÚT"
+
+msgid "eventpage.seconds" 
+msgstr "GIÂY"
+
+msgid "eventpage.finished" 
+msgstr "ĐÃ KẾT THÚC"
+
+msgid "eventpage.current" 
+msgstr "ĐANG DIỄN RA"
+
+msgid "eventpage.future" 
+msgstr "SẮP DIỄN RA"
+# END EVENT
+
+# START PROMOTION DETAIl
+msgid "promotionpage.btn.all_promotion" 
+msgstr "TẤT CẢ KHUYẾN MÃI "
+
+msgid "promotionpage.other_promotion" 
+msgstr "KHUYẾN MÃI  KHÁC"
+
+msgid "promotionpage.menu.all" 
+msgstr "TẤT CẢ"
+# END PROMOTION DETAIl
+
+# START CAREER DETAIl
+msgid "careerpage.btn.all_career" 
+msgstr "TẤT CẢ TUYỂN DỤNG"
+
+msgid "careerpage.other_career" 
+msgstr "TUYỂN DỤNG KHÁC"
+# END CAREER DETAIl
+
+# START NEW DETAIl
+msgid "newpage.btn.all_news" 
+msgstr "TẤT CẢ TIN TỨC"
+
+msgid "newpage.other_new" 
+msgstr "TIN TỨC KHÁC"
+# END NEW DETAIl
+
+# START FAQS
+msgid "faqspage.header.title"
+msgstr "HỎI ĐÁP"
+
+msgid "faqspage.header.description"
+msgstr "Những câu hỏi thường gặp sẽ giúp bạn có những trải nghiệm tốt hơn khi đến Helio Center."
+
+msgid "faqspage.text.support_more"
+msgstr "BẠN VẪN MUỐN HỖ TRỢ THÊM?"
+
+msgid "faqspage.text.contact_us"
+msgstr "LIÊN HỆ VỚI CHÚNG TÔI"
+# END FAQs
+
+# START CONTACT 
+msgid "contact.header.title"
+msgstr "LIÊN HỆ"
+
+msgid "contact.header.description"
+msgstr "Những câu hỏi thường gặp sẽ giúp bạn có những trải nghiệm tốt hơn khi đến Helio Center."
+
+msgid "contact.btn.send"
+msgstr "GỬI TIN NHẮN" 
+
+msgid "contact.lable.title.name"
+msgstr "Họ và Tên" 
+
+msgid "contact.lable.title.email"
+msgstr "Email" 
+
+msgid "contact.lable.title.phone"
+msgstr "Số điện thoại" 
+
+msgid "contact.lable.title.subject"
+msgstr "Chủ đề cần hỗ trợ" 
+
+msgid "contact.lable.title.message"
+msgstr "Nhập nội dung" 
+
+msgid "contact.message_success"
+msgstr "Tin nhắn của bạn đã gửi thành công!"
+
+msgid "contact.message_error"
+msgstr "Có lỗi xãy ra. Bạn vui lòng xem và sửa các lỗi dưới đây"
+
+msgid "Incorrect, please try again."
+msgstr "Không hợp lệ. Vui Lòng Thử Lại."
+
+msgid "This field is required."
+msgstr "Trường này không được bỏ trống."
+# END CONTACT
+
+# START OTHER PRODUCT
+msgid "other_product.header.title"
+msgstr "SẢN PHẨM KHÁC"
+
+msgid "other_product.header.description"
+msgstr "Ngoài những sản phẩm của Helio center như Helio Play, helio Kids, Quầy đổi quà, Coffee & Bakery. helio Center còn có những sản phẩm độc đáo khác mang bản sắc riêng của Helio Center như Combo, Trip trường học, Tiệc sinh nhật nhằm phục vụ tốt hơn các nhu cầu vui chơi và giả trí cảu khách hàng."
+# END OTHER PRODUCT
+
+# START ADMIN PROMOTION
+msgid "admin_promotion.message_success"
+msgstr "Lưu thành công!"
+
+msgid "admin_promotion.btn_back_admin"
+msgstr "TRỞ VỀ ADMIN PROMOTION"
+
+msgid "admin_promotion.btn_save"
+msgstr "LƯU"
+# START ADMIN PROMOTION
+
+# START HELIO PHOTO
+msgid "helio_photo.total_image"
+msgstr "Hình ảnh"
+# END HELIO PHOTO
+
+#START FOOTER
+msgid "footer.contact.address"
+msgstr "Khu công viên Đông Nam Đài tưởng niệm, Đường 2/9, Phường Hòa Cường Bắc, Quận Hải Châu, TP Đà Nẵng"
+
+msgid "footer.menu.home"
+msgstr "TRANG CHỦ"
+
+msgid "footer.menu.about"
+msgstr "GIỚI THIỆU"
+
+msgid "footer.menu.career"
+msgstr "TUYỂN DỤNG"
+
+msgid "footer.menu.contact"
+msgstr "LIÊN HỆ"
+
+msgid "footer.menu.news"
+msgstr "TIN TỨC"
+
+msgid "footer.menu.experience"
+msgstr "TRẢI NGHIỆM"
+
+msgid "footer.menu.policy"
+msgstr "CHÍNH SÁCH"
+
+msgid "footer.menu.terms_of_use"
+msgstr "ĐIỀU KHOẢN SỬ DỤNG"
+
+msgid "footer.text_right"
+msgstr "Một sản phẩm vui chơi đến từ"
+
+msgid "footer.text_company"
+msgstr "Khởi Phát, Ltd."     
+#END FOOTER

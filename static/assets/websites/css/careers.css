@@ -1,0 +1,67 @@
+/*LIST CAREERS ITEM */
+.career-div {
+	padding-top: 25px;
+}
+.col-equal {
+	display: flex;
+}
+.carrer-item.thumbnail {
+	margin-bottom: 0px;
+	padding: 0px;
+	border-radius: 0px;
+	border: none;
+	background-color: #372f60;
+}
+
+.carrer-item.thumbnail .caption {
+	padding: 15px;
+}
+
+.carrer-item.thumbnail p {
+	color: #fff;
+}
+
+.carrer-item.thumbnail p.carrer-name a {
+	font-size: 24px;
+	font-family: "Yanone Kaffeesatz";
+	color: #fff;
+	text-decoration: none;
+}
+.carrer-item.thumbnail p.carrer-name a:hover {
+	color: #fec231;
+}
+.div-view-more {
+	margin: auto;
+	margin-top: 50px;
+}
+a.btn-custom-style.btn-custom-style-career {
+    border: 1px solid #0095bb;
+}
+.active a.btn-custom-style.btn-custom-style-career:focus,
+a.btn-custom-style.btn-custom-style-career:focus, 
+a.btn-custom-style.btn-custom-style-career:hover {
+    color: #0095bb;
+    background-color: #fff;
+    border: 1px solid #15062b;
+    background-image: none;
+}
+/*ITEM LG HEADER*/
+.careers-lg {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.careers-lg .carrer-item.thumbnail {
+	position: relative;
+}
+
+.careers-lg .carrer-item.thumbnail .caption {
+	position: absolute;
+	bottom: 0px;
+	background-color: #372f60;
+	width: 100%;
+}
+@media (max-width: 991px) {
+	.careers-lg .carrer-item.thumbnail .caption {
+		position: static;
+	}
+}

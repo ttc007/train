@@ -1,0 +1,325 @@
+/*START CAROUSEL*/
+#eventsCarousel .carousel-inner>.item img {
+    opacity: 0.4;
+}
+.carousel-custom {
+    position: relative;
+    margin: 0px auto;
+    height: 80%;
+    border: none;
+    overflow: visible;
+}
+
+ol.carousel-indicators-custom .active {
+    width: 40px;
+    height: 4px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-color: #fff;
+}
+ol.carousel-indicators-custom li {
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    margin: 0 5px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #bd197c;
+    border-color: #bd197c;
+    border-radius: 0px;
+}
+/*END CAROUSEL*/
+
+/*START TITLE EVENT*/
+.all-event-title {
+    color: #fec231;
+    margin: 10px 0px;
+}
+/*END TITLE EVENT*/
+
+/*EVENT COTENT CSS*/
+.content-pull-right .item-content-text {
+    background: url("../images/bg_events_left.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.content-pull-left .item-content-text {
+    background: url("../images/bg_events_right.png") no-repeat;
+    background-size: 100% 100%;
+}
+a.btn-custom-style.btn-custom-style-events {
+    border: 1px solid #fff;
+}
+.active a.btn-custom-style.btn-custom-style-events:focus,
+a.btn-custom-style.btn-custom-style-events:focus, 
+a.btn-custom-style.btn-custom-style-events:hover {
+    color: #23194f;
+    background-color: #fff;
+    border: 1px solid #fff;
+    background-image: none;
+}
+.text-limit-rows {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   max-height: 100px;
+    -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+}
+/*END GAME CONTENT CSS*/
+
+/*START BUTTON VIEW MORE*/
+.div-view-more {
+    margin:auto;
+    margin-top: 50px;
+}
+a.btn-custom-style.btn-custom-style-events-view-more {
+    border-image-source: linear-gradient(16deg, #322cb8, #23194f);
+}
+.active a.btn-custom-style.btn-custom-style-events-view-more:focus,
+a.btn-custom-style.btn-custom-style-events-view-more:focus, 
+a.btn-custom-style.btn-custom-style-events-view-more:hover {
+    color: #23194f;
+    background-color: #fff;
+    border-image-source: linear-gradient(16deg, #23194f, #fff);
+    background-image: none;
+}
+/*END BUTTON VIEW MORE*/
+.carousel-fade>.carousel-inner>.item {
+    transition-property: opacity;
+}
+.carousel-fade>.carousel-inner>.item,
+.carousel-fade>.carousel-inner>.active.left,
+.carousel-fade>.carousel-inner>.active.right {
+    opacity: 0;
+}
+.carousel-fade>.carousel-inner>.active,
+.carousel-fade>.carousel-inner>.next.left,
+.carousel-fade>.carousel-inner>.prev.right {
+    opacity: 1;
+}
+/* START CSS EVENT COURSEL */
+.event-month:not(.active) {
+    display: none;
+}
+.event-month {
+    font-size: 36px;
+    font-family: "Yanone Kaffeesatz";
+}
+.layer-coursel-btn {
+    margin-bottom: 15px;
+}
+.div-month-btn {
+    padding-top: 15px;
+}
+
+.month-btn-prev,
+.month-btn-next {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+.event-btn-prev,
+.event-btn-next {
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.event-coursel-btn-group {
+    padding-top: 30px;
+}
+.events-name-div {
+    border-bottom: 3px solid #15062b;
+    min-height: 140px;
+}
+.flexslider.carousel {
+    background: none;
+    border: none;
+    margin-bottom: 20px;
+}
+.item-flex {
+    padding: 0px;
+    background-color: #443855;
+}
+
+.item-flex.finished-class {
+    background-color: #211336;
+    opacity: 0.5;
+}
+ 
+.item-line.future-class .item-content-image img
+{
+    opacity: 0.4;
+}
+
+.flex-direction-nav a:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e079";
+    font-size: 30px;
+    color: #fff;
+}
+.flex-direction-nav a.flex-next:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e080";
+}
+
+.events-name, 
+.events-date {
+    padding: 5px 15px;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+/* END CSS EVENT COURSEL */
+.event-info {
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+}
+.event-info a {
+    color: #fff;
+    text-decoration: none;
+}
+.page-header-text {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-header-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* custom color event by time  */
+.future-class .image-text-head {
+    background: #fec231;
+    color: #fff;
+}
+.future-class .image-text-head:after {
+    border-left: 10px solid #fec231;
+}
+
+.current-class .image-text-head {
+    background: #bd197c;
+    color: #fff;
+}
+.current-class .image-text-head:after {
+    border-left: 10px solid #bd197c;
+}
+
+.future-class .events-date-div {
+    background-color: #fec231;
+}
+.current-class .events-date-div {
+    background-color: #bd197c;
+}
+.label-event-header .lable-btn {
+    padding: 25px 53px 15px;
+    font-family: "Cabin";
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.label-event-header.finished-event .lable-btn {
+    color: #000;
+    background: rgba(204, 204, 204, 0.79);
+    border: none;
+}
+
+.label-event-header.current-event .lable-btn {
+    color: #bd197c;
+    background: none;
+    border: 2px solid #bd197c;
+}
+/*start countdown*/
+.countdown-container {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-content {
+    width: 420px;
+    border: 4px solid #fec231;
+    height: 117px;
+    margin: auto;
+}
+.countdown-content .time {
+    position: relative;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+.countdown-content .time .current {
+    color: #fec231;
+    font-size: 60px;
+    font-weight: bold;
+}
+.countdown-content .time .label {
+    color: #fec231;
+    font-size: 18px;
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+}
+/*end countdown*/
+@media (max-width: 991px) {
+    .content-pull-left .item-content-text,
+    .content-pull-right .item-content-text
+    {
+        background: #23194f;
+    }
+    .label-event-header .lable-btn {
+        padding: 15px 20px 10px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .countdown-content {
+        width: 300px;
+        border: 4px solid #fec231;
+        height: 70px;
+        margin: auto;
+    }
+    .countdown-content .time {
+        position: relative;
+        width: 67px;
+        display: inline-block;
+        text-align: center;
+    }
+    .countdown-content .time .current {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .countdown-content .time .label {
+        font-size: 14px;
+        top: 37px;
+    }
+
+    .event-info {
+        margin-top: 15px;
+    }
+
+    .item-content-text {
+        min-height: auto;
+    }
+
+    .item-content-text.pull-right, 
+    .image-text.pull-right {
+        float: none !important;
+    }
+    .event-info .big-font-size {
+        letter-spacing: 1.5px;
+    }
+}
+
+

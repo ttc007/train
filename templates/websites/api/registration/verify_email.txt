@@ -1,0 +1,7 @@
+Helio account
+Security code
+Please use the following security code for the Helio account {{email}}.
+Security code: {{code}}
+
+Thanks,
+The Helio account team

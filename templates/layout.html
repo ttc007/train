@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+{% load i18n %} 
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+
+<html lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_BIDI %}dir="rtl" {% endif %}>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% endblock %}"> 
+    <link href="{{ STATIC_URL }}assets/images/favicon.ico" type="image/x-icon" rel="icon">
+    <link href="{{ STATIC_URL }}assets/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <META HTTP-EQUIV="Content-language" CONTENT="vi">
+
+    <link href="{{ STATIC_URL }}assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}assets/websites/css/global.css" rel="stylesheet" type="text/css" />
+    
+    
+
+    {% block metacontent %}{% endblock %}
+    <title>{% block title %}{% endblock title %}</title>
+    {% block extrastylesheet %}{% endblock %}
+
+    <script type="text/javascript">
+        var STATIC_URL = '{{ STATIC_URL }}';
+        var MEDIA_URL = '{{ MEDIA_URL }}';
+        var lang_code = '{{ LANGUAGE_CODE }}';
+        var fbAppId = '{{FB_APP_ID}}';
+    </script>
+    
+    <script src = "{{ STATIC_URL }}assets/js/jquery-3.2.1.min.js"></script>
+    <script src = "{{ STATIC_URL }}assets/js/bootstrap.min.js"></script>
+    <script src = "//connect.facebook.net/en_US/sdk.js"></script>
+    <script src="{{ STATIC_URL }}assets/js/jquery.blockUI.js"></script>
+    <script src = "{{ STATIC_URL }}assets/websites/js/ajaxSetup.js"></script>
+    <script src = "{{ STATIC_URL }}assets/websites/js/main.js"></script>
+    {% block extrascript %}{% endblock %}
+
+</head>
+
+<body id="{% block body_id %}body{% endblock %}">
+<div class="layout cd-main-content">
+    <!-- Start Header -->
+    {% include 'header.html' %}
+    <!-- End Header -->
+
+    <!-- Start Body -->
+    <div class="body-wrap">
+        {% if advertisements %}
+        <div class="text-center event-new">
+            <marquee>
+                {% for advertisement in advertisements %}
+                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                    <span>{{advertisement}}</span>
+                {% endfor %}
+            </marquee>
+            <!-- <marquee behavior="scroll" direction="left" id="marq" loop="50" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="10" scrolldelay="10"><p><i class="fa fa-bell-o" aria-hidden="true"></i>{{advertisement}}</p></marquee> -->
+        </div>
+        {% endif %}
+        {% block main_content %} {% endblock %}
+
+    </div>
+    <!-- End Body -->
+
+    <!-- Start Footer -->
+    {% include 'footer.html' %}
+    <!-- End Footer -->
+</div>
+</body>
+</html>

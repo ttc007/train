@@ -1,0 +1,168 @@
+/*START CAROUSEL*/
+.carousel-custom {
+    position: relative;
+    margin: 0px auto;
+    height: 80%;
+    border: none;
+    overflow: visible;
+}
+
+ol.carousel-indicators-custom .active {
+    width: 40px;
+    height: 4px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-color: #fff;
+}
+ol.carousel-indicators-custom li {
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    margin: 0 5px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #bd197c;
+    border-color: #bd197c;
+    border-radius: 0px;
+}
+
+/*END CAROUSEL*/
+
+/*GAME COTENT CSS*/
+.content-pull-right .item-content-text {
+    background: url("../images/bg_promotion_left.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.content-pull-left .item-content-text {
+    background: url("../images/bg_promotion_right.png") no-repeat;
+    background-size: 100% 100%;
+}
+a.btn-custom-style.btn-custom-style-promotion {
+    border: 1px solid #fff;
+ /*   border-image: linear-gradient(16deg, #fff, #fff);
+    -webkit-border-image: -webkit-linear-gradient(16deg, #fff, #fff);*/
+}
+.active a.btn-custom-style.btn-custom-style-promotion:focus,
+a.btn-custom-style.btn-custom-style-promotion:focus, 
+a.btn-custom-style.btn-custom-style-promotion:hover {
+    color: #c61d82;
+    background-color: #fff;
+    border: 1px solid #fff;
+    background-image: none;
+}
+/*END GAME CONTENT CSS*/
+
+/*START BUTTON GROUP CSS*/
+.btn-section-div {
+    margin-top: 20px;
+}
+.promotion-btn-group {
+    margin-right: -2px;
+    margin-left: -2px;
+}
+.promotion-btn-group li a.btn-custom-style:hover,
+.promotion-btn-group li a.btn-custom-style:focus,
+.promotion-btn-group li a {
+    border: none;
+    background-color: #7d1e6a;
+    border-radius: 0px;
+    background-image: none;
+    font-size: 36px;
+}
+.promotion-btn-group li {
+    padding-bottom: 25px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+.promotion-btn-group li.active a.btn-custom-style {
+    background-image: none;
+    background-color: #ed3aa7;
+    border: none;
+}
+.promotion-btn-group li.active a.btn-custom-style:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-width: 20px 141px 0 141px;
+    border-style: solid;
+    border-color: #ed3aa7 transparent transparent transparent;
+}
+/*END BUTTON GROUP CSS*/
+
+.image-hidden-sm-up {
+    display: none;
+}
+
+/*START BUTTON VIEW MORE*/
+
+.div-view-more {
+    margin:auto;
+    margin-top: 50px;
+}
+
+a.btn-custom-style.btn-custom-style-promotion-view-more {
+    border-image-source: linear-gradient(16deg, #b82c8e, #c61d82);
+}
+.active a.btn-custom-style.btn-custom-style-promotion-view-more:focus,
+a.btn-custom-style.btn-custom-style-promotion-view-more:focus, 
+a.btn-custom-style.btn-custom-style-promotion-view-more:hover {
+    color: #c61d82;
+    background-color: #fff;
+    border-image-source: linear-gradient(16deg, #c61d82, #fff);
+    background-image: none;
+}
+
+/*END BUTTON VIEW MORE*/
+
+@media (max-width: 1199px) { 
+    .promotion-btn-group li.active a.btn-custom-style:after {
+        content: none;
+    }
+    .carousel .prevButton,
+    .carousel .nextButton {
+        top: 178px;
+    }
+}
+
+@media (max-width: 991px) {
+    .content-pull-left .item-content-text,
+    .content-pull-right .item-content-text
+    {
+        background-image: linear-gradient(to top, #7d1e6a, #ed3aa7);
+        background-size: 100% 100%;
+    }
+    /*CAROUSEL PHONE SCREEN*/
+    ol.carousel-indicators-custom .active {
+        width: 20px;
+        height: 3px;
+        margin: 0 5px;
+        background-color: #fff;
+        border-color: #fff;
+    }
+    ol.carousel-indicators-custom li {
+        display: inline-block;
+        width: 20px;
+        height: 3px;
+        margin: 0 5px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #bd197c;
+        border-color: #bd197c;
+        border-radius: 0px;
+    }
+}
+@media (max-width: 767px) { 
+    .promotion-btn-group li a.btn-custom-style:hover,
+    .promotion-btn-group li a.btn-custom-style:focus,
+    .promotion-btn-group li a {
+        font-size: 24px;
+    }
+
+    .promotion-btn-group li {
+        padding-bottom: 15px;
+    }
+}

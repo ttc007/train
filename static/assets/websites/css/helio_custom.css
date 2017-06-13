@@ -1,0 +1,24 @@
+.tabs-left .nav-tabs {
+    float: left;
+    border-bottom: 0px;
+    margin-top: 27px;
+    width: 150px;
+}
+
+.tabs-left .nav-tabs li {
+    float: none;
+    margin-bottom: 0px;
+    margin-right: -4px;
+}
+
+.tabs-left .nav-tabs > li.active > a, 
+.tabs-left .nav-tabs > li.active > a:focus, 
+.tabs-left .nav-tabs > li.active > a:hover {
+    border-right-color: transparent;
+    border-bottom-color: #ddd;
+}
+
+.tabs-left .tab-pane {
+    border: 1px solid #ddd;
+    margin-left: 150px;
+}

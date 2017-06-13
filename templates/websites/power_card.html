@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% load i18n %} 
+{% block title %}Power card - Thẻ vạn năng{% endblock %}
+{% block extrastylesheet %}
+	<link href="{{ STATIC_URL }}assets/websites/css/powercard.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}assets/websites/css/faqs_section.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block extrascript %}
+	<!-- <script type="text/javascript" src="{{ STATIC_URL }}assets/js/jquery-1.4.4.min.js"></script> -->
+	<script src = "{{ STATIC_URL }}assets/websites/js/powercard.js"></script>
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+	<!-- CARD PAGE DESCRIPTION -->
+	{% if result.powercard_type %}
+	<div class="page-top">
+		<div class="page-header-img">
+		    <div>
+		        <img src="{{ STATIC_URL }}assets/websites/images/power_card_header.png" width="100%">
+		    </div>
+		    <div class="page-title" align="center">
+		        <div class="col-md-12">
+		            <p class="page-title-text">{{result.powercard_type.name}}</p>
+		        </div>
+		    </div>
+		</div>
+	    <div align="center" class="page-header-text">
+	        <div class="form-title">
+	            <p class="text-description page_description">{{result.powercard_type.description}}</p>
+	        </div>
+	    </div>
+	</div>
+	{% endif %}
+    
+
+    <!-- CARD INFORMATION -->
+    {% if result.powercards %}
+    <div class="row card-info-section">
+    	{% for powercard in result.powercards %}
+        <div class="powercard item col-md-4 {{powercard.key_query}}">
+        	<div class="panel panel-default">
+				<div class="panel-heading card-header">{{powercard.name}}</div>
+				<div class="panel-body">
+	                <div class="powercard-content">
+	                	<img src="{{ MEDIA_URL }}{{powercard.image}}" width="100%">
+	                	<div class="card-description">
+	                        <p class="powercard-name">{{powercard.short_description}}</h3>
+	                        {{powercard.content | safe}}
+	                    </div>
+	                </div>
+	                <div class="row card-div-bottom hidden">
+	                	<button class="view-full card-close">
+	                		 {% trans "powercard.btn.view_full" %}<br> <i class="glyphicon glyphicon-chevron-down"></i>
+	                	</button>
+	                </div>
+				</div>
+			</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- FAQs -->
+    {% if result.faqs %}
+    <div class="faqs-section">
+    	<div class="faqs-title" align="center">
+    		<p class="big-font-size">{% trans "powercard.title.section.faq" %}</p>
+    	</div>
+    	{% include 'websites/sections/faqs_section.html' %}
+
+    	<div class="div-view-more" align="center">
+            <a class="btn-view-more btn-custom-style btn-custom-style-faqs" role="button">{% trans "btn.view_more" %}<span class="glyphicon glyphicon-chevron-down glyphicon-custom"></a>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- DOWNLOAD APP BANNER -->
+    <div class="app-banner">
+	    <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+	</div>
+</div>
+
+{% endblock %}

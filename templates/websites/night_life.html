@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}Night life - Chợ đêm{% endblock %}
+{% block extrastylesheet %}
+<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/night_life.css">
+{% endblock %}
+{% block extrascript %}
+<script type="text/javascript" src = "{{ STATIC_URL }}assets/websites/js/night_life.js"></script>
+{% endblock %}
+{% block main_content %}
+{% if night_life %}
+<div class="page-top">
+    <div class="page-header-img">
+        <div>
+            <img src="{{ STATIC_URL }}assets/websites/images/night-life-header.png" width="100%">
+        </div>
+    </div>
+    <div class="page-caption">
+        <div class="container">
+            <div class="nl-page-info">
+                <div class="nl-page-title">
+                    <p class="big-font-size">{{night_life.name}}</p>
+                    <hr class="line-hr">
+                </div>
+                <div class="nl-page-description">
+                    <p>{{night_life.short_description}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="custom-icons">
+                        <div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+</div>
+
+<div class="container">
+    {{night_life.content | safe}}
+</div>
+{% endif %}
+<div class="container">
+    <!-- DOWNLOAD APP BANNER -->
+    <div class="app-banner">
+        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+    </div>
+</div>
+{% endblock %}

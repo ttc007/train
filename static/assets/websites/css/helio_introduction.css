@@ -1,0 +1,138 @@
+/*START BUTTON*/
+.intro-btn-group li a.btn-custom-style:hover,
+.intro-btn-group li a.btn-custom-style:focus,
+.intro-btn-group li a {
+    border: 1px solid #000;
+    background-color: #7d1e6a;
+    border-radius: 0px;
+    background-image: none;
+}
+.intro-btn-group li.active a.btn-custom-style {
+    background-image: none;
+    background-color: #e336a7;
+    border: 1px solid #000;
+}
+.intro-btn-group li.active a.btn-custom-style:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-width: 20px 190px 0;
+    border-style: solid;
+    border-color: #e336a7 transparent transparent transparent;
+}
+.content-section {
+	font-family: "Yanone Kaffeesatz";
+}
+.button-custom {
+	padding-top: 50px;
+}
+/*END BUTTON*/
+
+/*HELIO ABOUT*/
+.content-section .panel-default,
+.content-section .panel-default>.panel-heading,
+.content-section .panel-default>.panel-heading+.panel-body {
+	background: none;
+	border: none;
+	color: #fff;
+}
+.content-section .panel-default>.helio-thoughtful {
+	border-bottom: 1px solid #fec231;
+}
+.content-section .panel-default>.helio-funny {
+	border-bottom: 1px solid #35bdeb;
+}
+.content-section .panel-default>.helio-creative {
+	border-bottom: 1px solid #e436aa;
+}
+.content-section .panel-default>.panel-heading {
+	padding: 35px 0px 20px 0px;
+}
+.media-img-custom {
+	padding: 30px;
+}
+.media-body-custom {
+	padding-left: 15px;
+}
+.helio-thoughtful {
+	color: #fec231;
+}
+.helio-funny {
+	color: #35bdeb;
+}
+.helio-creative {
+	color: #e436aa;
+}
+.textwrap {
+	float: left;
+	margin: 30px 40px;
+}
+.description-helio-about {
+	padding-top: 5px;
+}
+.content-image-section {
+	height: 180px;
+	width: 100%;
+	display: block;
+	position: relative;
+	margin: 80px 0px 150px;
+}
+.content-about {
+	padding: 5px 0px;
+}
+/*HELIO PHILOSOPHY*/
+.title-philosophy {
+	padding: 20px 10px 10px;
+	text-align: center;
+	color: #fec231;
+}
+.imgage-philosophy {
+	padding: 30px 0px;
+}
+.content-philosophy {
+	padding: 15px 0px;
+}
+/*HELIO OVERVIEW*/
+.overview-description {
+	padding-top: 30px;
+}
+.imgage-overview {
+	padding: 20px 0px;
+}
+.custom-row.row {
+	margin: 20px 0px 0px;
+}
+.images-inline {
+	display: inline;
+}
+.image-inline {
+	padding: 0px 0px 30px;
+}
+.title-description-kids {
+	font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    margin: 50px 0px 20px;
+}
+.content-overview {
+	padding: 15px 0px;
+}
+.image-section img {
+	width: 250px;
+}
+
+img.textwrap {
+	width: 160px;
+	height: 160px;
+}
+
+@media (max-width: 991px) {
+	.intro-btn-group li.active a.btn-custom-style:after {
+	    background-image: none;
+	    background-color: #e336a7;
+	    border: none;
+	}
+}

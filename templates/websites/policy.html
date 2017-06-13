@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}Policy{% endblock %}
+{% block main_content %} 
+{% if policy %}
+<div class="container div-content-layer">
+	<div class="page-top">
+		<div class="page-header-img">
+			<div>
+				<img src="{{ MEDIA_URL }}{{ policy.image }}" width="100%">
+			</div>
+			<div class="page-title" align="center">
+				<div class="col-md-12">
+					<p class="page-title-text">{{policy.name}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-content" align="center">
+		{{policy.content | safe}}
+	</div>
+</div>
+{% endif %}
+
+{% endblock %}

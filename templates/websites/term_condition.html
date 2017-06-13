@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}Term and condition{% endblock %}
+{% block extrastylesheet %}
+	<link href="{{ STATIC_URL }}assets/websites/css/term_condition.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block main_content %} 
+{% if term %}
+<div class="container div-content-layer">
+	<div class="page-top">
+		<div class="page-header-img">
+			<div>
+				<img src="{{ MEDIA_URL }}{{ term.image }}" width="100%">
+			</div>
+			<div class="page-title" align="center">
+				<div class="col-md-12">
+					<p class="page-title-text">{{term.name}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="div-content">
+		{{term.content | safe}}
+	</div>
+</div>
+{% endif %}
+
+{% endblock %}

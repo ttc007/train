@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block extrastylesheet %}
+	<link href="{{ STATIC_URL }}assets/websites/css/careers.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block title %}Careers - Tuyển dụng{% endblock title %}
+{% block extrascript %}
+	<script type="text/javascript" src = "{{ STATIC_URL }}assets/websites/js/careers.js"></script>
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+	{% if result.careers_type %}
+	<div class="page-top">
+        <div class="page-header-img">
+            <div>
+                <img src="{{ STATIC_URL }}assets/websites/images/career-header.png" width="100%">
+            </div>
+            <div class="page-title" align="center">
+                <div class="col-md-12">
+                    <p class="page-title-text">{{result.careers_type.name}}</p>
+                </div>
+            </div>
+        </div>
+        <div align="center" class="page-header-text">
+            <div class="form-title">
+                <p class="text-description page_description">{{result.careers_type.description}}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {{result.careers_pin_top.0}}
+    {% if result.careers_pin_top %}
+	<div class="row careers-lg">
+		<div class="col-md-12">
+			<div class="thumbnail carrer-item">
+				<img src="{{ MEDIA_URL }}{{result.careers_pin_top.image}}" alt="Lights" width="100%">
+				<div class="caption">
+					<p class="carrer-name"><a class="title-post" href="/careers/{{result.careers_pin_top.id}}/detail/">{{result.careers_pin_top.name}}</a></p>
+					<p class="short_description">{{result.careers_pin_top.short_description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	{% if result.careers %}
+    <div class="row careers-content row-equal">
+    	{% for career in result.careers %}
+    		{% if not result.careers_pin_top.id or career.id != result.careers_pin_top.id %}
+			<div class="col-md-6 career-div col-equal">
+				<div class="thumbnail carrer-item">
+					<img src="{{ MEDIA_URL }}{{career.image}}" alt="Lights" width="100%">
+					<div class="caption">
+						<p class="carrer-name"><a class="title-post" href="/careers/{{career.id}}/detail/">{{career.name}}</a></p>
+						<p class="short_description">{{career.short_description}}</p>
+					</div>
+				</div>
+			</div>
+			{% endif %}
+		{% endfor %}
+		<div class="div-view-more col-md-12" align="center">
+			<a class="btn-view-more btn-custom-style btn-custom-style-career" role="button">{% trans "btn.view_more" %} <span class="glyphicon glyphicon-chevron-down glyphicon-custom"></span></a>
+        </div>
+	</div>
+
+	{% endif %}
+
+  	<!-- DOWNLOAD APP BANNER -->
+    <div class="app-banner">
+        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,371 @@
+.block-content-50 {
+    margin-top: 50px;
+}
+.block-content-20 {
+    margin-top: 20px;
+}
+.banner3 {
+    margin-bottom: 20px;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+        width: 100%;
+        margin: auto;
+}
+.home-carousel li {
+    height: 193px;
+
+}
+.home-carousel li a {
+    text-align: left;
+    color: #fff;
+    border-right: 0.5px solid #ccc;
+    border-left: 0.5px solid #ccc;
+    min-height: 180px;
+    padding-top: 35px;
+}
+.home-carousel li a:hover, 
+.home-carousel li a:focus {
+    background: none;
+}
+.home-carousel li.active {
+    border: 0px;
+    transform: translateY(-50px);
+    background-color: #1eb9f3 !important;
+}
+.home-carousel li.active a {
+    border: none;
+}
+.home-carousel li.prev a {
+    border-right: 0px;
+}
+
+.home-carousel li.active + li a {
+    border-left: 0px;
+}
+
+/*  bhoechie tab */
+div.game-section-menu{
+    padding: 0px;
+    padding-top: 15px;
+}
+div.game-section-menu div.list-group{
+    margin-bottom: 0;
+}
+div.game-section-menu div.list-group>a{
+    font-family: "Yanone Kaffeesatz";
+    font-weight: bold;
+    margin-top: 24px;
+    height: 100px;
+    font-size: 48px;
+    line-height: 40px;
+    border-radius: 0px;
+    background-color: #15062b;
+    border: 0px;
+    border-top: 3px solid #271a3a;
+    border-bottom: 3px solid #271a3a;
+    padding-top: 30px;
+    color: #fff;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+div.game-section-menu div.list-group>a.active,
+div.game-section-menu div.list-group>a.active .glyphicon,
+div.game-section-menu div.list-group>a.active .fa {
+    background-color: #1eb9f3;
+    background-image: #1eb9f3;
+    color: #ffffff;
+    border: none;
+}
+
+div.game-section-menu div.list-group>a.active:after{
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -48px;
+    border-left: 0;
+    border-bottom: 48px solid transparent;
+    border-top: 48px solid transparent;
+    border-left: 20px solid #1eb9f3;
+}
+
+div.game-section-menu div.list-group>a.night-life.active{
+    background-color: #25bcab;
+    background-image: #25bcab;
+}
+div.game-section-menu div.list-group>a.night-life.active:after {
+    border-left: 20px solid #25bcab;
+}
+
+div.game-section-menu div.list-group>a.kids.active{
+    background-color: #fec231;
+    background-image: #fec231;
+}
+div.game-section-menu div.list-group>a.kids.active:after {
+    border-left: 20px solid #fec231;
+}
+
+div.game-section-content{
+    background-color: #ffffff; 
+}
+div.game-section {
+    /*min-height: 362px;*/
+    padding: 0px;
+    background-color: #271a3a;
+}
+div.game-section div.game-section-content:not(.active){
+  display: none;
+}
+div.game-section div.game-type-slide:not(.active) {
+    display: none;
+}
+div.game-section div.game-right:not(.active) {
+    display: none;
+}
+.game-right {
+    margin-right: -30px;
+}
+div.game-section-detail {
+    padding: 0px;
+}
+/*custom*/
+ul.type-group li a {
+    position: relative;
+    text-align: left;
+}
+ul.type-group li a span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.content-info {
+    padding: 34px 0px;
+    text-align: center;
+}
+.event-title, 
+.game-title, 
+.game-type, 
+.game-description {
+    color: #fec231;
+}
+.game-left {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    background-color: #271a3a;
+}
+.game-type-content {
+    min-height: 200px;
+}
+.btn-custom-group a.btn-custom-style {
+    padding: 6px 15px;
+    max-width: 80%;
+    margin-bottom: 5px;
+}
+.active a.btn-custom-style.btn-custom-game-type:focus,
+a.btn-custom-style.btn-custom-game-type:hover {
+    color: #fff;
+    background-color: transparent;
+    background-image: none;
+    border-image-source: linear-gradient(16deg, #e436aa, #2c1b76);
+    background-image: none;
+}
+.vidieo-div {
+    position: relative;
+}
+.vidieo-right {
+    background: url("../images/vidieo_right.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+.vidieo-caption {
+    min-height: 335px;
+}
+.vidieo-left {
+    position: absolute;
+    top: 0px; 
+    right: 0px;
+    height: 100%;
+}
+.vidieo-left .vidieo-img{
+    height: 100%;
+    padding-top: 5%; 
+    padding-bottom: 5%;
+    position: relative;
+}
+.vidieo-left .vidieo-img img {
+    height: 100%;
+}
+
+.vidieo-left .vidieo-btn {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-link-more {
+    margin: 10px 15px;
+}
+.list-line {
+    margin-left: 0px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.list-line li {
+    width: 33px;
+    border-bottom: 5px solid;
+    margin-right: 13px;
+    color: #15062b;
+}
+.list-line li.active {
+    color: #fff;
+}
+.btn-entertaiment {
+    margin-bottom: 56px;
+}
+.event-date {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 0.5;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #e436aa;
+    margin-top: 35px;
+}
+
+.event-month {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2.14;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #e436aa;
+}
+.event-time {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2.14;
+    letter-spacing: 0.7px;
+    text-align: left;
+    color: #e436aa;
+}
+.event-name {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #ffffff;
+}
+.event-name:hover,
+.event-name:focus {
+    color: #fec231;
+    text-decoration: none;
+}
+.event-all-btn {
+    text-align: right;
+}
+
+.panel.game-section-content {
+    background: none;
+    border: none;
+    margin-bottom: 0px;
+}
+.game-section-content.active .collapse {
+    display: block;
+}
+
+
+
+.flexslider.vidieo-slider {
+    margin-bottom: 0px;
+    border: none;
+    background: none;
+}
+.flexslider.vidieo-slider .flex-direction-nav {
+    display: none !important;
+}
+@media (max-width: 991px) {
+    .banner-custom {
+        margin-top: 20px;
+    }
+    .vidieo-right {
+        background: url("../images/m_vidieo_right.png") no-repeat;
+        background-size: 100% 100%;
+        height: auto;
+        min-height: auto;
+    }
+    .vidieo-caption {
+        min-height: auto;
+    }
+    .vidieo-left {
+        position: static;
+    }
+    .game-type-content {
+        min-height: 170px;
+    }
+    .event-all-btn {
+        text-align: left;
+    }
+
+    .game-left {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .game-section-content.active .collapse {
+        display: none;
+    }
+    div.game-section div.panel.game-section-content {
+        display: block;
+    }
+    .game-section-content .collapse.in {
+        display: block;
+    }
+    .game-section-content h2 {
+        padding: 18px 40px 18px 15px;
+        position: relative;
+        border-top: 1px solid #ccc;
+        margin: 0px;
+    }
+    /*Hots name display on mobile css*/
+    .caption-custom {
+        position: relative;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        z-index: 10;
+        padding-bottom: 0px;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    }
+    .caption-custom a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .more-less {
+        float: right;
+        color: #fff;
+        font-size: 20px;
+    }
+    div.game-section-content h2 {
+        background-color: #271a3a;
+    }
+    div.game-section-content h2.collapsed {
+        background-color: #15062b;
+    }
+    .game-right {
+        margin-right: 0px;
+    }
+    a.btn-custom-style.btn-custom-game-type {
+        letter-spacing: 1.5px;
+    }
+}

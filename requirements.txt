@@ -1,0 +1,21 @@
+Django==1.10.5
+mysql-python
+django-modeltranslation
+Pillow
+djangorestframework
+social-auth-core
+social-auth-app-django
+djangorestframework-jwt
+rest-social-auth
+django-grappelli
+django-ckeditor
+django-mssql
+django-pymssql
+uwsgi
+html2text==2014.4.5
+django-recaptcha
+
+#-e git+git://github.com/mvpdev/django-eav.git#egg=django-eav
+#django-allauth
+#django-rest-auth
+#django-rest-auth[with_social]

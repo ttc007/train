@@ -1,0 +1,204 @@
+/*START FAQ CONTENT CSS*/
+/*.faqs-section {
+    margin-top: 10px;
+}*/
+.faqs-title p.big-font-size {
+    color: #fec231;
+}
+
+.more-less {
+    float: right;
+    color: #fec231;
+}
+.faqs-section .panel-default,
+.faqs-section .panel-default>.panel-heading,
+.faqs-section .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.faqs-section .panel-default>.panel-heading .panel-title,
+.faqs-section .panel-default>.panel-heading .panel-title p {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.11;
+    letter-spacing: 1.8px;
+    text-align: left;
+    color: #ffffff;
+}
+.faqs-section .panel-default {
+    border-bottom: 3px dotted #fff;
+}
+.faqs-section .panel-default:first-child {
+    border-top: 3px dotted #fff;
+}
+.faqs-section .panel-default>.panel-heading {
+    padding: 35px 0px 20px 0px;
+}
+.faqs-section .panel-default .panel-body {
+    padding-top: 0px;
+    width: 90%;
+    margin: auto;
+}
+/*END FAQ CONTENT CSS*/
+
+.view-more-desc {
+    margin: 0px 0 25px;
+    font-size: 38px;
+}
+.div-view-more {
+    margin:auto;
+	margin-top: 50px;
+}
+
+/*START BUTTON CSS*/
+a.btn-custom-style.btn-custom-style-faqs {
+    border: 1px solid #f4963a;
+}
+.active a.btn-custom-style.btn-custom-style-faqs:focus,
+a.btn-custom-style.btn-custom-style-faqs:focus, 
+a.btn-custom-style.btn-custom-style-faqs:hover {
+    color: #f4963a;
+    background-color: #fff;
+    border: 1px solid #f4963a;
+    background-image: none;
+}
+.suport-more {
+    margin: 50px 0;
+}
+/*END BUTTON CSS*/
+
+/*START PANEL CSS*/
+.navbar-default .nav-custom ul {
+    float: none;
+    display: block;
+}
+.sidebar-nav .navbar-custom li {
+    float: none;
+    display: block;
+}
+.sidebar-nav .navbar-custom li:after {
+    background-color: #15062b;
+    color: #fff;
+}
+
+.navbar-default .nav-custom {
+    border: none;
+}
+
+.nav-custom {
+    text-align: right;
+    padding: 0 0px 20px;
+}
+.nav-custom .navbar-nav>.active>a, 
+.nav-custom .navbar-nav>.active>a:focus, 
+.nav-custom .navbar-nav>.active>a:hover,
+.nav-custom .navbar-nav>li>a:hover  {
+    color: #fec231;
+    background-color: #15062b;
+    font-family: "Yanone Kaffeesatz";
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+.nav-custom .navbar-nav>li>a{
+    color: #fff;
+    font-family: "Yanone Kaffeesatz";
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.panel-custom-content {
+    padding: 75px 15px 20px;
+}
+
+.panel-custom-content p {
+    padding: 10px 0px;
+}
+
+ol {
+    counter-reset: item;
+}
+
+ol > li {
+    counter-increment: item;
+}
+
+ol ol > li {
+    display: block;
+}
+
+ol.ol-custom ol > li:before {
+    content: counters(item, ".") ". ";
+    margin-left: -55px;
+}
+
+.ol-custom {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ol-custom p {
+    margin-left: -15px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+/*END PANEL CSS*/
+
+@media (max-width: 997px) {
+    .nav-custom {
+        padding: 0 0 20px;
+    }
+    a.btn-custom-style {
+        font-size: 20px;
+    }
+    .page-title {
+        position: static;
+        margin-top: 50px;
+    }
+    p.page-title-text {
+        font-size: 72px;
+        letter-spacing: 3px;
+    }
+    .faqs-section .panel-default>.panel-heading .panel-title,
+    .faqs-section .panel-default>.panel-heading .panel-title p {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.11;
+        letter-spacing: 1.8px;
+        text-align: left;
+        color: #ffffff;
+    }
+    .view-more-desc {
+        margin: 0px 0 25px;
+        font-size: 30px;
+    }
+    .hr-custom {
+        border-color: #802ca2;
+        margin: 0px 0px 50px;
+    }
+    .nav-custom .navbar-nav>.active>a, 
+    .nav-custom .navbar-nav>.active>a:focus, 
+    .nav-custom .navbar-nav>.active>a:hover,
+    .nav-custom .navbar-nav>li>a:hover  {
+        font-size: 20px;
+        letter-spacing: 2px;    
+    }
+    .nav-custom .navbar-nav>li>a{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .faqs-section .panel-default>.panel-heading {
+        padding: 15px 0px 10px 0px;
+    }
+    .panel-body > p {
+        font-size: 14px;
+    }
+    .suport-more {
+        margin: 20px 0;
+    }
+}

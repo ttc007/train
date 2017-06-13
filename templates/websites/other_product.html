@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% load i18n %} 
+{% block title %}Other product - Sản phẩm khác{% endblock %}
+{% block extrastylesheet %}
+	<link href="{{ STATIC_URL }}assets/websites/css/image_section.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}assets/websites/css/faqs_section.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}assets/websites/css/other_product.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block extrascript %}
+	<script src = "{{ STATIC_URL }}assets/websites/js/other_product.js"></script>
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+	<!-- OTHER PRODUCT PAGE DESCRIPTION -->
+	
+	<div class="page-top">
+		<div class="page-header-img">
+			<div>
+				<img src="{{ STATIC_URL }}assets/websites/images/other_product_header.png" width="100%">
+			</div>
+			<div class="page-title" align="center">
+				<div class="col-md-12">
+					<p class="page-title-text">{% trans "other_product.header.title" %}</p>
+				</div>
+			</div>
+		</div>
+		<div align="center" class="page-header-text">
+			<div class="form-title">
+				<p class="text-description">{% trans "other_product.header.description" %}</p>
+			</div>
+		</div>
+	</div>
+	<!-- BUTTON GROUP -->
+	{% if products %} 
+    <div class="other-product-btn-section">
+        <ul class="nav other-product-btn-group">
+        	{% for product in products %}
+            <li class="col-md-4 {% if forloop.counter0 == 0 %} active {% endif %}">
+                <a href="#id_{{product.id}}" role="tab" data-toggle="tab" class="btn-custom-style ">{{product.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+	<!-- CONTENT -->
+
+	<div class="tab-content">
+		{% for product in products %}
+		<div role="tabpanel" class="tab-pane view-more-content {% if forloop.counter0 == 0 %} active {% endif %}" id="id_{{product.id}}">
+			<!-- CONTENT -->
+			<div class="wrap">
+				{% for item in product.post_images %}
+					<div class="box{{forloop.counter}}">
+						<div class="box-inner">
+							<img src="{{ MEDIA_URL }}{{item.image}}">
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+	<!-- DOWNLOAD APP BANNER -->
+	<div class="app-banner">
+		<a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% if games %}
+    {% for game_type, game_group in games.items %}
+    <fieldset>
+        <legend>{{game_type}}</legend>
+        <div class="col-md-12">
+        {% for game in game_group %}
+        <div class="row game-group-content">
+            <div class="group-games">
+                <div class="col-md-2 game-thumbnail">
+                    <div class="thumbnail">
+                        <img src="{{ STATIC_URL }}assets/images/img1.jpg" class="img-responsive" style="width:100%" alt="Image">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3 class="name">{{game.name}} </h3>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p style="font-weight: bold;">Description: </p>
+                        </div>
+                        <div class="col-md-9">
+                            {{game.short_description | safe}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p style="font-weight: bold;">Appropriate for: </p>
+                        </div>
+                        <div class="col-md-9">
+                            <p>Trung tâm giải trí phức hợp Helio Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="line row">
+        {% endfor %}
+        </div>
+    </fieldset>
+    {% endfor %}
+{% endif %}

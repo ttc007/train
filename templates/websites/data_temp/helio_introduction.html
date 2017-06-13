@@ -1,0 +1,282 @@
+{% extends "layout.html" %}
+{% block title %}Helio Itroduction - Giới thiệu Helio{% endblock %}
+{% block extrastylesheet %}
+    <link href="{{ STATIC_URL }}assets/websites/css/helio_introduction.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block extrascript %}
+   <!--  <script src = "{{ STATIC_URL }}assets/websites/js/powercard.js"></script> -->
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+    <!-- CARD PAGE DESCRIPTION -->
+    <div class="page-top">
+        <div class="page-header-img">
+            <div>
+                <img src="{{ STATIC_URL }}assets/websites/images/helio-about-header.png" width="100%">
+            </div>
+            <div class="page-title" align="center">
+                <div class="col-md-12">
+                    <p class="page-title-text">HELIO CENTER</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- button -->
+    <ul class="nav nav-pills nav-justified intro-btn-group button-custom">
+        <li class="active">
+            <a href="#helio-about" role="tab" data-toggle="tab" class="btn-custom-style">VE HELIO</a>
+        </li>
+        <li>
+            <a href="#helio_philosophy" role="tab" data-toggle="tab" class="btn-custom-style">TRIET LY HELIO</a>
+        </li>
+        <li>
+            <a href="#helio-overview" role="tab" data-toggle="tab" class="btn-custom-style">TONG QUAN</a>
+        </li>
+    </ul>
+    
+    <!-- CONTENT -->
+    <div class="content-section">
+        <div class="tab-content" style="padding-top: 50px;">
+            <div role="tabpanel" class="tab-pane active" id="helio-about">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading helio-thoughtful" role="tab" id="heading1">
+                            <h3 class="panel-title">                        
+                                </a>
+                                <p class="helio-thoughtful big-font-size">HELIO - CHU DAO</p>
+                            </h3>
+                        </div>
+                        <div>
+                            <div class="panel-body">
+                                <!-- <div class="media">
+                                    <div class="media-left media-img-custom">
+                                        <img src="{{ STATIC_URL }}assets/websites/images/helio-thoughtful.png"" class="media-object" style="width:100px">
+                                    </div>
+                                    <div class="media-body media-body-custom">
+                                        <p>Hãy thử đọc nhanh tên của chúng tôi, bạn nghe thấy gì? Có quen thuộc không?</p>
+                                        <p>Helio trước tiên là một lời chào - Hello. Khi chúng tôi nói “Helio chào mừng bạn”, điều đó cũng có nghĩa là “Hello, chào mừng bạn”. Chúng tôi mong muốn bạn sẽ luôn cảm thấy tự nhiên và thoái mái nhất có thể khi đến với Helio Center, với những dịch vụ thân thiện và chu đáo của chúng tôi.</p>
+                                        <p>Helio mong muốn đáp ứng và chăm sóc những niềm vui của từng khách hàng. Trên cơ sở đó, chúng tôi thiết kế các sản phẩm và dịch vụ mang tính cá thể hóa, dựa vào việc nghiên cứu kỹ lưỡng về tâm lý hành vi của từng nhóm tuổi.</p>
+
+                                    </div>
+                                </div> -->
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-thoughtful.png" class="textwrap" >
+                                <div class="description-helio-about">
+                                    <p class="content-about">Hãy thử đọc nhanh tên của chúng tôi, bạn nghe thấy gì? Có quen thuộc không?</p>
+                                    <p class="content-about">Helio trước tiên là một lời chào - Hello. Khi chúng tôi nói “Helio chào mừng bạn”, điều đó cũng có nghĩa là “Hello, chào mừng bạn”. Chúng tôi mong muốn bạn sẽ luôn cảm thấy tự nhiên và thoái mái nhất có thể khi đến với Helio Center, với những dịch vụ thân thiện và chu đáo của chúng tôi.</p>
+                                    <p>Helio mong muốn đáp ứng và chăm sóc những niềm vui của từng khách hàng. Trên cơ sở đó, chúng tôi thiết kế các sản phẩm và dịch vụ mang tính cá thể hóa, dựa vào việc nghiên cứu kỹ lưỡng về tâm lý hành vi của từng nhóm tuổi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading helio-funny" role="tab" id="heading2">
+                            <h4 class="panel-title">
+                                <p class="helio-funny big-font-size">HELIO - VUI NHON</p>
+                            </h4>
+                        </div>
+                        <div>
+                            <div class="panel-body">
+                                <!-- <div class="media">
+                                    <div class="media-left media-img-custom">
+                                        <img src="{{ STATIC_URL }}assets/websites/images/helio-funny.png"" class="media-object" style="width:100px">
+                                    </div>
+                                    <div class="media-body media-body-custom">
+                                        <p>Nhắc đến Helio, bạn liên tưởng đến điều gì? Một chất khí? Một vị thần Hy Lạp? Hay cả hai?</p>
+                                        <p>Cái tên Helio lấy cảm hứng từ chữ Heli – một nguyên tố hóa học, và chữ Heli cũng có nguồn gốc từ tên của vị thần Mặt Trời Helios trong thần thoại Hy Lạp. Hãy thử hít một ít khí Helio có trong quả bóng bay và nói chuyện với một ai đó, họ sẽ rất buồn cười vì giọng nói hệt như một chú sóc chuột của bạn. Cái tên Helio chứa đựng khí Heli, cũng là chứa đựng sự vui nhộn.
+                                        </p>
+                                        <p>Helio cam kết mang đến cho khách hàng những trò chơi mới nhất, hiện đại nhất, và đặc biệt vui nhộn nhất hiện nay, được tham khảo và chọn lọc từ rất nhiều hội chợ triển lãm trò chơi do IAAPA – Hiệp hội các khu vui chơi giải trí quốc tế lớn nhất thế giới tổ chức.</p>
+
+                                    </div>
+                                </div> -->
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-funny.png" class="textwrap">
+                                <div class="description-helio-about">
+                                    <p class="content-about">Nhắc đến Helio, bạn liên tưởng đến điều gì? Một chất khí? Một vị thần Hy Lạp? Hay cả hai?
+                                    </p>
+                                    <p class="content-about">Cái tên Helio lấy cảm hứng từ chữ Heli – một nguyên tố hóa học, và chữ Heli cũng có nguồn gốc từ tên của vị thần Mặt Trời Helios trong thần thoại Hy Lạp. Hãy thử hít một ít khí Helio có trong quả bóng bay và nói chuyện với một ai đó, họ sẽ rất buồn cười vì giọng nói hệt như một chú sóc chuột của bạn. Cái tên Helio chứa đựng khí Heli, cũng là chứa đựng sự vui nhộn.
+                                    </p>
+                                    <p class="content-about">Helio cam kết mang đến cho khách hàng những trò chơi mới nhất, hiện đại nhất, và đặc biệt vui nhộn nhất hiện nay, được tham khảo và chọn lọc từ rất nhiều hội chợ triển lãm trò chơi do IAAPA – Hiệp hội các khu vui chơi giải trí quốc tế lớn nhất thế giới tổ chức.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading helio-creative" role="tab" id="heading2">
+                            <h4 class="panel-title">
+                                <p class="helio-creative big-font-size">HELIO - SANG TAO</p>
+                            </h4>
+                        </div>
+                        <div>
+                            <div class="panel-body">
+                                <!-- <div class="media">
+                                    <div class="media-left media-img-custom">
+                                        <img src="{{ STATIC_URL }}assets/websites/images/helio-creative.png" class="media-object" style="width:100px">
+                                    </div>
+                                    <div class="media-body media-body-custom">
+                                        <p>Hãy nhìn vào logo Helio, bạn thấy điều gì? Bạn có thấy một chiếc hộp đang mở tràn vô số những ý tưởng? Bạn có thấy sự tươi mới và tràn đầy sức sống từ những màu sắc vui tươi?</p>
+                                        <p>Helio Center được thai ngén từ những năm 2008, với định hướng mang đến cho người dân Đà Nẵng một mô hình dịch vụ mới, mang tính đột phá trong lĩnh vực vui chơi giải trí. Chúng tôi cam kết những trò chơi tại Helio là những trò chơi mới nhất, sáng tạo nhất, mà bạn không thể tìm thấy ở bất kỳ khu vui chơi nào khác tại Việt Nam hiện nay.</p>
+                                    </div>
+                                </div>  -->     
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-creative.png" class="textwrap">
+                                <div class="description-helio-about">
+                                    <p class="content-about">Hãy nhìn vào logo Helio, bạn thấy điều gì? Bạn có thấy một chiếc hộp đang mở tràn vô số những ý tưởng? Bạn có thấy sự tươi mới và tràn đầy sức sống từ những màu sắc vui tươi?</p>
+                                    <p class="content-about">Helio Center được thai ngén từ những năm 2008, với định hướng mang đến cho người dân Đà Nẵng một mô hình dịch vụ mới, mang tính đột phá trong lĩnh vực vui chơi giải trí. Chúng tôi cam kết những trò chơi tại Helio là những trò chơi mới nhất, sáng tạo nhất, mà bạn không thể tìm thấy ở bất kỳ khu vui chơi nào khác tại Việt Nam hiện nay.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="helio_philosophy">
+                <div class="title-philosophy">
+                    <h1 class="big-font-size">HELIO MANG TRONG MÌNH NIỀM VUI VÀ MONG MUỐN LAN TỎA ĐẾN TẤT CẢ MỌI NGƯỜI.</h1>
+                </div>
+                <!-- CONTENT HELIO PHILOSOPHY -->
+                <div>
+                    <p class="content-philosophy">Chúng tôi tâm niệm rằng việc có được những niềm vui không phải là một điều diễn ra tự nhiên trong cuộc sống, đó là do chính bản thân mỗi người sắp đặt và tận hưởng nó. Cuộc sống ban tặng cho chúng ta vô số những điều thú vị, thế giới dâng tặng cho ta rất nhiều thứ, quá nhiều cái đẹp, quá nhiều cái vui, chỉ có điều chúng ta có biết khai thác nó không mà thôi.</p>
+                    <p class="content-philosophy">Cũng như các bạn, chúng tôi có 365 ngày một năm; nhưng Helio không chọn mặt trời làm trục quay mà tất cả mọi hoạt động đều lấy tiếng cười làm tâm điểm. Chúng tôi mong muốn tất cả mọi người khi đến đây đều vui vẻ, thoải mái, và chúng tôi cũng lấy đó làm tiêu chí để tồn tại và phát triển. Helio mang đến một không khí vui vẻ của những trò chơi, những sự kiện, những nhân viên với nụ cười rạng rỡ… để tạo động lực cho mọi người đến đây tìm thấy niềm vui của riêng mình và tận hưởng niềm vui ấy.</p>
+                    <p class="content-philosophy">Helio mang trong mình niềm vui, và mong muốn lan tỏa đến tất cả mọi người.</p>
+                    <img src="{{ STATIC_URL }}assets/websites/images/philosophy_smile.jpg" width="100%" class="imgage-philosophy">
+                    <p class="content-philosophy">Bạn muốn những phút giây sảng khoái hết cỡ với bạn bè trên những trò chơi mạo hiểm hay các máy game hấp dẫn? Bạn muốn những giây phút gia đình quây quần bên nhau bằng các trò chơi cùng con trẻ? Hay bạn muốn một ngày hạnh phúc cùng người yêu thương cùng những hoạt động vui nhộn?</p>
+                    <p class="content-philosophy">Chúng tôi mong muốn đáp ứng được những mong muốn đó của bạn, mang lại cho bạn những giây phút hạnh phúc nhất trong cuộc sống, và thông qua bạn để lan tỏa thêm niềm vui đó đến mọi người xung quanh.</p>
+                    <p class="content-philosophy">Đó cũng chính là tôn chỉ hoạt động của chúng tôi!</p>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="helio-overview">
+                <div class="overview-description">
+                    <!-- INTRODUCE HELIO -->
+                    <div>
+                        <p class="content-overview">
+                            Helio Center là một Trung tâm giải trí phức hợp đa dịch vụ đầu tiên tại thành phố Đà Nẵng. Với diện tích sử dụng hơn 35.000 m2 và nằm tại trung tâm thành phố, Helio Center mang đến cho người dân Đà Nẵng và khách du lịch một lựa chọn hoàn hảo nhất để vui chơi giải trí cùng bạn bè và gia đình mỗi ngày.
+                        </p>
+                        <img src="{{ STATIC_URL }}assets/websites/images/Helio_General.jpg" width="100%" class="imgage-overview">
+                        <div class="row-height row custom-row">
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-01.jpg" width="100%">  
+                            </div>
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-02.jpg" width="100%">  
+                            </div>
+                        </div>
+                        <p class="content-overview">
+                            Helio Center bao gồm ba sản phẩm chính là Helio Kids, Helio Play, và Helio Food & Beverage, cùng với hàng chục sự kiện được tổ chức hoành tráng mỗi năm.
+                        </p>
+                    </div>
+                    <!-- INTRODUCE HELIO KIDS -->
+                    <div>
+                        <h4 class="title-description-kids">
+                            HELIO KIDS – THIÊN ĐƯỜNG VUI CHƠI DÀNH CHO TRẺ EM.
+                        </h4>
+                        <p class="content-overview">
+                            Helio Kids là mô hình edutainment thực sự dành cho trẻ em. Đây là mô hình mới trên thế giới, kết hợp giữa hai thuật ngữ “education” và “entertainment”, nghĩa là một khu vui chơi kết hợp giữa tính giải trí và giáo dục trong các trò chơi.
+                        </p>
+                        <p class="content-overview">
+                            Đến với Helio Kids, bạn và con trẻ sẽ được trải nghiệm những mô hình vui chơi hoàn toàn mới lạ với hàng trăm trò chơi hấp dẫn.Với tổng diện tích lên đến hơn 2.700 m2, gồm 42 khu vực chơi, có sức chứa gần 1.000 người; Helio Kids thực sự là một khu vui chơi trong nhà và ngoài trời có quy mô hoành tráng nhất hiện nay dành cho trẻ em từ 2 - 9 tuổi tại Đà Nẵng.
+                        </p>
+                        <div class="row-height row custom-row">
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-03.jpg" width="100%">  
+                            </div>
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-04.jpg" width="100%">  
+                            </div>
+                        </div>
+                        <p class="content-overview">
+                            Helio Kids có khu vực chơi trong nhà với số lượng trò chơi lên hàng trăm trò, và có thể mở rộng ra đến hàng nghìn cách chơi, dựa trên sự sáng tạo của trẻ. Tuyệt vời hơn! Bé còn được hòa mình cùng thiên nhiên trong một khu vui chơi ngoài trời có diện tích lên tới hơn 750 m2, bao gồm các khu khám phá, biễu diễn, vận động… Helio Kids mang lại cho trẻ một môi trường hoàn hảo cho sự phát triển cả về thể chất lẫn tinh thần.
+                        </p>
+                        <div class="row-height row custom-row">
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-05.jpg" width="100%">  
+                            </div>
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-06.jpg" width="100%">  
+                            </div>
+                        </div>
+                        <p class="content-overview">
+                            Helio Kids còn là khu vui chơi cho trẻ em với các hạng mục lần đầu tiên xuất hiện tại Việt Nam. Ví dụ như các Khu giả lập với những đồ chơi kích thước thật, các Khu vận động chuyên biệt dành cho các bé dưới 2 tuổi, Khu khảo cổ xương khủng long, Khu trò chơi tương tác với tính sáng tạo cao... Tất cả đều được thiết kế theo tiêu chuẩn cao nhất từ các chuyên gia hàng đầu của Mỹ.
+                        </p>
+                    </div>
+                    <!-- INTRODUCE HELIO PLAY -->
+                    <div>
+                        <h4 class="title-description-kids">
+                            HELIO PLAY – THẾ GIỚI TRÒ CHƠI SÔI ĐỘNG & MỚI LẠ.
+                        </h4>
+                        <p class="content-overview">
+                            Helio Play - tập hợp những hững mô hình game thú vị, hiện đại nhất trên thế giới, đảm bảo mang lại cho bạn những giây phút vui chơi đầy sôi động và hào hứng.
+                        </p>
+                        <p class="content-overview">
+                            Các khu trò chơi bao gồm: Boating School – Học lái thuyền, Bumper Boat – Thuyền điện đụng, Mini digger – Lái xe xúc, Ice Skating – Sân trượt băng, Duckpin Bowling – Bowling trái nhỏ, Bumper Car – Xe điện đụng, Tornado – Vòi rồng , Himalaya – Vòng quay tốc độ , Ballocity – Nhà banh  và đặc biệt là Go Kart – Trường đua F1.
+                        </p>
+                        <div class="row-height row custom-row">
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-07.jpg" width="100%">  
+                            </div>
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-08.jpg" width="100%">  
+                            </div>
+                        </div>
+                        <p class="content-overview">
+                            Chưa hết, Helio Play còn có một phòng Game hoành tráng diện tích gần 1.000m2  với những máy game thùng hấp dẫn và hệ thống Wii – PlayStation. Helio Play chắc chắn là lựa chọn không thể bỏ qua cho các game thủ.
+                        </p>
+                        <p class="content-overview">
+                            Điểm đặc biệt của Helio Play chính là hệ thống thanh toán tối tân : Power Card. Bạn có thể nạp tiền trước, quẹt thẻ để chi trả nhanh chóng hoặc kiểm tra quản lý số dư của mình. Tất cả các dịch vụ tại Helio đều được thanh toán thông qua thẻ: từ ăn bánh uống café đến đua xe bắn súng, chơi bowling hay cả mua vé chơi trọn tháng. Chỉ cần quẹt thẻ, và cuộc vui bắt đầu!
+                        </p>
+                        <div class="row-height row custom-row">
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-09.jpg" width="100%">  
+                            </div>
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-10.jpg" width="100%">  
+                            </div>
+                        </div>
+                    </div>
+                    <!-- INTRODUCE HELIO FOOD AND BEVERAGE -->
+                    <div>
+                        <h4 class="title-description-kids">
+                            HELIO FOOD & BEVERAGE - KHÔNG GIAN ẨM THỨC ĐA DẠNG & ĐẶC SẮC.
+                        </h4>
+                        <p class="content-overview">
+                            Với một hệ thống Foodcourt và quán cà phê hiện đại, Helio Center mang đến cho bạn những dịch vụ tốt nhất trong quá trình vui chơi giải trí tại đây.
+                        </p>
+                        <p class="content-overview">
+                            Khu vực Foodcourt với hàng trăm món ăn và thức uống từ các nền ẩm thực châu Á, chia thành các quầy như: Quầy Nhật với ẩm thực Nhật Bản, Quầy Hàn với ẩm thức xứ Kim Chi, Quầy Thái & Malay với nét ẩm thực Đông Nam Á của hai quốc gia Thái Lan và Malaysia, và 2 quầy Cơm Việt chuyên về ẩm thực Việt Nam.
+                        </p>
+                        <p class="content-overview">
+                            Helio Bakery và Helio Coffee cũng là những điểm dừng chân thú vị cho khách hàng sau những giờ phút vui chơi thả ga cùng bạn bè.
+                        </p>
+                        <div class="row-height row custom-row">
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-11.png" width="100%">  
+                            </div>
+                            <div class="col-md-6 col-xs-12 col-sm-height image-inline">
+                                <img src="{{ STATIC_URL }}assets/websites/images/helio-overview-12.png" width="100%">  
+                            </div>
+                        </div>
+                        <p class="content-overview">
+                            Helio Center cũng cung cấp một dịch vụ tiệc chuyên nghiệp, với trang thiết bị hiện đại và đội ngũ nhân viên thân thiện, đáp ứng nhu cầu của mọi khách hàng ở mọi lứa tuổi.
+                        </p>
+                        <p class="content-overview">
+                            Cùng với hàng chục sự kiện lớn nhỏ được tổ chức thường nhật và vào các dịp lễ Tết, Helio Center hứa hẹn sẽ trở thành một địa điểm dạo chơi thú vị nhất cho giới trẻ Đà Nẵng và khách du lịch.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-image-section">
+            <div class="image-section" align="center">
+                <img src="{{ STATIC_URL }}assets/websites/images/img-section.png">
+            </div>
+        </div>
+    </div>
+        
+        
+
+        
+
+    <!-- DOWNLOAD APP BANNER -->
+    <div class="app-banner">
+        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+    </div>
+</div>
+
+{% endblock %}

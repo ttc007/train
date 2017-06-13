@@ -1,0 +1,24 @@
+.layer {
+	margin: 30px auto;
+}
+.ms-container {
+	width: 100%;
+}
+.ms-container .ms-selectable, 
+.ms-container .ms-selection {
+	text-align: center;
+}
+.ms-container .ms-selectable ul, 
+.ms-container .ms-selection ul {
+	text-align: left;
+}
+.ms-header {
+	background-color: #b733ad;
+    color: #fff;
+}
+.layer a.btn-ad-promotion-detail {
+	font-size: 18px;
+}
+#message_success {
+	margin-top: 20px;
+}

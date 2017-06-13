@@ -1,0 +1,111 @@
+.event-info {
+    margin-top: 100px;
+}
+
+.future-class .image-text-head {
+    background: #fec231;
+    color: #fff;
+}
+.future-class .image-text-head:after {
+    border-left: 10px solid #fec231;
+}
+
+.current-class .image-text-head {
+    background: #bd197c;
+    color: #fff;
+}
+.current-class .image-text-head:after {
+    border-left: 10px solid #bd197c;
+}
+
+.future-class .events-date-div {
+    background-color: #fec231;
+}
+.current-class .events-date-div {
+    background-color: #bd197c;
+}
+.label-event-header .lable-btn {
+    padding: 25px 53px 15px;
+    font-family: "Cabin";
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.label-event-header.finished-event .lable-btn {
+    color: #000;
+    background: rgba(204, 204, 204, 0.79);
+    border: none;
+}
+
+.label-event-header.current-event .lable-btn {
+    color: #bd197c;
+    background: none;
+    border: 2px solid #bd197c;
+}
+/*start countdown*/
+.countdown-container {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-content {
+    width: 420px;
+    border: 4px solid #fec231;
+    height: 117px;
+    margin: auto;
+}
+.countdown-content .time {
+    position: relative;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+.countdown-content .time .current {
+    color: #fec231;
+    font-size: 60px;
+    font-weight: bold;
+}
+.countdown-content .time .label {
+    color: #fec231;
+    font-size: 18px;
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+}
+@media (max-width: 991px) {
+    .label-event-header .lable-btn {
+        padding: 15px 20px 10px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .countdown-content {
+        width: 300px;
+        border: 4px solid #fec231;
+        height: 70px;
+        margin: auto;
+    }
+    .countdown-content .time {
+        position: relative;
+        width: 67px;
+        display: inline-block;
+        text-align: center;
+    }
+    .countdown-content .time .current {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .countdown-content .time .label {
+        font-size: 14px;
+        top: 37px;
+    }
+
+    .event-info {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,120 @@
+.item-line {
+    background-size: 70% 100% !important;
+    min-height: 450px;
+    margin-top: 20px;
+}
+.image-text-head {
+    background-color: #f0f0f0;
+    color: #000;
+    padding-left: 30px;
+    margin-left: -30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    /*width: 100%;*/
+}
+.image-text-head {
+    position: relative;
+}
+.content-pull-right .image-text-head:after {
+    content: "";
+    position: absolute;
+    z-index: 1000;
+    border-left: 10px solid #f0f0f0;
+    border-bottom: 25px solid transparent;
+    right: -10px;
+    top: 0px;
+}
+.item-name {
+    font-size: 36px;
+    font-family: "Yanone Kaffeesatz";
+    line-height: 45px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.description-slide, 
+.pricing-btn-section {
+    position: relative;
+    width: 85%;
+    margin: auto;
+}
+.item-content-text {
+    padding: 35px 15px;
+    min-height: 450px;
+}
+
+.image-text-head label {
+    margin: 3px 10px 2px 0px;
+}
+.content-pull-left .image-text-head {
+    transition: background 0.2s;
+    transform: skew(-15deg);
+    margin-left: -33px;
+}
+.content-pull-left .image-text-head label {
+    transform: skew(15deg);
+}
+.content-pull-left.item-line {
+    background-position: left;
+}
+
+@media (min-width: 992px) { 
+    .item-line {
+        position: relative;
+    }
+    .item-content-image  {
+        position: absolute;
+        height: 100%;
+    }
+    .item-content-text {
+        z-index: 9999;
+    }
+    .content-pull-right .item-content-image {
+        right: 0px;
+    }
+    .item-content-image .row {
+        height: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .item-line {
+        background: none !important;
+        height: auto;
+    }
+    .item-content-text
+    {
+        background-size: 100% 100%;
+        height: auto;
+        padding-bottom: 35px;
+        min-height: auto; 
+    }
+
+    .content-pull-left .image-text-head:after {
+        content: "";
+        position: absolute;
+        z-index: 1000;
+        border-left: 10px solid #f0f0f0;
+        border-bottom: 25px solid transparent;
+        right: -10px;
+        top: 0px;
+    }
+    .content-pull-left .image-text-head {
+        transition: background 0.2s;
+        transform: skew(0deg);
+        margin-left: -30px;
+    }
+    .content-pull-left .image-text-head label{
+        transform: skew(0deg);
+    }
+}
+
+@media (max-width: 767px) { 
+    .item-name {
+        font-size: 28px;
+        line-height: 28px;
+    }
+}

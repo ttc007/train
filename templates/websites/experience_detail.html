@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}Experience Detail{% endblock %}
+{% block extrastylesheet %}
+<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/page_detail.css">
+{% endblock %}
+{% block main_content %} 
+{% if experience %}
+<div class="page-top">
+    <div class="page-header-img-full">
+	    <img src="{{ MEDIA_URL }}{{ experience.image }}" width="100%">
+	    <div class="page-caption">
+			<div class="container">
+				<div class="page-title-detail row">
+			        <div class="col-md-12" align="center">
+			            <p class="big-font-size">{{experience.name}}</p>
+			        </div>
+			        <div class="col-md-12">
+				        <div class="custom-icons" align="center">
+				        	<!-- <a id="fb_like_btn" class="style-icon"><span class="glyphicon glyphicon-heart circle-icon" aria-hidden="true"></span> Like</a>
+				        	<a id="fb_share_btn" class="style-icon"><span class="fa fa-share-alt circle-icon" aria-hidden="true"></span> Share</a> -->
+				        	<div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+				        </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	    
+</div>		
+	
+<div class="container div-content-layer">
+	<div class="div-content" align="center">
+		{{experience.content | safe}}
+	</div>
+	<!-- <div class="div-content" align="center">
+		<p class="div-content-p">Các cây cầu ở Đà Nẵng được đánh giá rất cao và vẻ đẹp cho đến việc đầu tư, ý tưởng. Đã được nhiều tổ chức trong nước và thế giới công nhận và vinh danh. Đà Nẵng là thành phố nổi tiếng với những cây cầu đặc biệt, là điểm nhấn du lịch của thành phố. Nếu như cầu sông Hàn là cầu quay duy nhất ở Việt Nam tính đến thời điểm hiện tại thì cầu Rồng lại là cầu phun lửa đầu tiên.</p>
+		<div>
+			<img class="img-div-content" src="{{ STATIC_URL }}assets/websites/images/experience_detail_header.png" width="100%">
+			<p class="title-div-content">Cầu quay Sông Hàn</p>
+			<p class="div-content-p">Các cây cầu ở Đà Nẵng được đánh giá rất cao và vẻ đẹp cho đến việc đầu tư, ý tưởng. Đã được nhiều tổ chức trong nước và thế giới công nhận và vinh danh. Đà Nẵng là thành phố nổi tiếng với những cây cầu đặc biệt, là điểm nhấn du lịch của thành phố. Nếu như cầu sông Hàn là cầu quay duy nhất ở Việt Nam tính đến thời điểm hiện tại thì cầu Rồng lại là cầu phun lửa đầu tiên.</p>
+			<p class="div-content-p">Các cây cầu ở Đà Nẵng được đánh giá rất cao và vẻ đẹp cho đến việc đầu tư, ý tưởng. Đã được nhiều tổ chức trong nước và thế giới công nhận và vinh danh. Đà Nẵng là thành phố nổi tiếng với những cây cầu đặc biệt, là điểm nhấn du lịch của thành phố. Nếu như cầu sông Hàn là cầu quay duy nhất ở Việt Nam tính đến thời điểm hiện tại thì cầu Rồng lại là cầu phun lửa đầu tiên.</p>
+		</div>
+		<div>
+			<img class="img-div-content" src="{{ STATIC_URL }}assets/websites/images/experience_detail_header.png" width="100%">
+			<p class="title-div-content">Cầu Thuận Phước – Cầu treo dây võng dài nhất Việt Nam</p>
+			<p class="div-content-p">Các cây cầu ở Đà Nẵng được đánh giá rất cao và vẻ đẹp cho đến việc đầu tư, ý tưởng. Đã được nhiều tổ chức trong nước và thế giới công nhận và vinh danh. Đà Nẵng là thành phố nổi tiếng với những cây cầu đặc biệt, là điểm nhấn du lịch của thành phố. Nếu như cầu sông Hàn là cầu quay duy nhất ở Việt Nam tính đến thời điểm hiện tại thì cầu Rồng lại là cầu phun lửa đầu tiên.</p>
+		</div>
+		<p class="author-post">Helio Center.</p>
+	</div> -->
+	<hr class="hr-custom">
+</div>
+{% endif %}
+
+{% if other_experiences %}
+<div class="container">
+	<div class="block-post-involved">
+	    <div class="row block-post-title">
+	      	<div class="col-md-6 col-md-6-custom">
+	        	<h4>{% trans "experiencepage.other_experience" %}</h4>
+	      	</div>
+	      	<div class="col-md-6 col-md-6-custom">
+	        	<a class="btn button-all btn-custom-style btn-custom-style-kids" href="{% url 'experience' %}" role="button">{% trans "experiencepage.btn.all_experience" %}<span class="glyphicon glyphicon-menu-right"></span></a>
+	      	</div>
+	    </div>
+	    <div class="row custom-other-exp">
+	    	{% for experience in other_experiences %}
+			<div class="item col-md-4 col-xs-12 custom-experience other-item">
+	        	<div class="style-post">
+	          		<span><a href="/experience/{{experience.id}}/detail/" class="thumbnail thumbnail-custom"><img src="{{ MEDIA_URL }}{{ experience.image }}" width="100%"></a></span>
+	          		<a class="title-post" href="/experience/{{experience.id}}/detail/">{{experience.name}}</a>
+	          		<p class="text-limit-rows">{{experience.short_description}}</p> <a class="view-detail" href="/experience/{{experience.id}}/detail/">{% trans "btn.view_detail" %}</a>
+	        	</div>
+	      	</div>
+	      	{% endfor %}
+	      	<!-- <div class="item col-md-4 col-xs-12 custom-experience">
+	        	<div class="style-post">
+	          		<span><a href="#" class="thumbnail thumbnail-custom"><img src="{{ STATIC_URL }}assets/websites/images/experience_detail_1.png" width="100%"></a></span>
+	          		<a class="title-post" href="#">VÒNG QUAY SUNWHELL</a>
+	          		<p class="text-limit-rows">Sunwhell - Một trong 10 đu quay cao nhất thế giới được đặt tại Đà Nẵng đã vô cùng nổi tiếng vs thu hút cực nhiều du khách tham quan </p> <a class="view-detail" href="#">Xem chi tiết</a>
+	        	</div>
+	      	</div>
+	      	<div class="item col-md-4 col-xs-12 custom-experience">
+		        <div class="style-post">
+		          	<span><a href="#" class="thumbnail thumbnail-custom"><img src="{{ STATIC_URL }}assets/websites/images/experience_detail_2.png" width="100%"></a></span>
+		          	<a class="title-post" href="#">SKY BAR CAO NHẤT VIỆT NAM</a>
+		          	<p class="text-limit-rows">Đây là quán bar được công nhận là cao nhất Việt Nam khi nào ở độ cao 166m. Nơi này cực kỳ thích hợp để ngắm toàn cảnh Đà Nẵng vào buổi đêm </p><a class="view-detail" href="#">Xem chi tiết</a>
+		        </div>
+	      	</div>
+	      	<div class="item col-md-4 col-xs-12 custom-experience">
+		        <div class="style-post">
+		          	<span><a href="#" class="thumbnail thumbnail-custom"><img src="{{ STATIC_URL }}assets/websites/images/experience_detail_3.png" width="100%"></a></span>
+		          	<a class="title-post" href="#">A LA CARTE HOLTEL</a>
+		          	<p class="text-limit-rows">Nội thất tinh tế kiểu Tây với gam màu trắng chủ đạomàu trắng chủ đạo. DDaqcj biệt là hồ bơi tràn biển với góc nhìn trực tiếp ra bãi biển cát trắng đẹp bãi biển cát trắng đẹp đến ngỡ ngàng </p><a class="view-detail" href="#">Xem chi tiết</a>
+		        </div>
+	      	</div> -->
+	    </div>
+  	</div>
+</div>
+{% endif %}
+{% endblock %}

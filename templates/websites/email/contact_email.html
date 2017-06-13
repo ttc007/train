@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Contact</title>
+        <style>
+        /* -------------------------------------
+            GLOBAL RESETS
+        ------------------------------------- */
+        img {
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%; }
+
+        body {
+            /*background-color: #f6f6f6;*/
+            font-family: sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0; 
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%; }
+
+        table {
+            border-collapse: separate;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            width: 100%; }
+            table td {
+              font-family: Helvetica,Arial,sans-serif;
+              font-size: 14px;
+              line-height: 18px;
+              vertical-align: top; }
+
+        /* -------------------------------------
+            BODY & CONTAINER
+        ------------------------------------- */
+
+        .body {
+          width: 100%; }
+
+        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+        
+
+        </style>
+    </head>
+    <body class="">
+        <table id="tb_welcome" style="" border="0" cellpadding="0" cellspacing="0" width="100%" class="tb_welcome">
+            <tbody>
+                <tr>
+                    <td style="color:#394f67;padding:4px 37px 0px 40px"><img src="http://{{ site.domain }}/static/assets/images/logo.png"></td>
+                </tr>
+                <tr>
+                  <hr>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:28px;font-size:18px;line-height:28px;height:28px;font-family:Helvetica,Arial,sans-serif;color:#394f67;padding:0px 40px 0px 40px;font-weight:lighter" align="left" valign="top">Hello Admin, </td>
+                </tr>
+                <tr>
+                    <td style="color:#394f67;padding:4px 37px 0px 40px">
+                        You have been recieved a contact from <strong>{{name}}</strong> with the following message:<br>
+                        <p>{{message}}</p>
+                    </td>
+                </tr>
+                <tr>
+                  <hr>
+                </tr>
+                <tr>
+                    <td style="color:#394f67;padding:4px 37px 0px 40px">
+                        <strong>User Email:</strong> {{email}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color:#394f67;padding:4px 37px 0px 40px">
+                        <strong>Phone Number: </strong>{{phone}}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="color:#394f67;padding:22px 40px 32px 40px" align="left" valign="top">
+                    <span style="padding:22px 0 0 0">Many thanks,</span>
+                    <br/>
+                    <span style="padding:22px 0 0 0">Helio Center</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

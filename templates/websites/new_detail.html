@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}News Detail{% endblock %}
+{% block extrastylesheet %}
+<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/page_detail.css">
+{% endblock %}
+{% block main_content %} 
+{% if new %}
+<div class="page-top">
+    <div class="page-header-img-full">
+	    <img src="{{ MEDIA_URL }}{{ new.image }}" width="100%">
+	    <div class="page-caption">
+			<div class="container">
+				<div class="page-title-detail row">
+			        <div class="col-md-12" align="center">
+			            <p class="big-font-size">{{new.name}}</p>
+			        </div>
+			        <div class="col-md-12">
+				        <div class="custom-icons" align="center">
+				        	<div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+				        </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	    
+</div>		
+	
+<div class="container div-content-layer">
+	<div class="div-content" align="center">
+		{{new.content | safe}}
+	</div>
+	<hr class="hr-custom">
+</div>
+{% endif %}
+
+{% if other_news %}
+<div class="container">
+	<div class="block-post-involved">
+	    <div class="row block-post-title">
+	      	<div class="col-md-6 col-md-6-custom">
+	        	<h4>{% trans "newpage.other_new" %}</h4>
+	      	</div>
+	      	<div class="col-md-6 col-md-6-custom">
+	        	<a class="btn button-all btn-custom-style btn-custom-style-kids" href="{% url 'news' %}" role="button">{% trans "newpage.btn.all_news" %}<span class="glyphicon glyphicon-menu-right"></span></a>
+	      	</div>
+	    </div>
+	    <div class="row custom-other-exp">
+	    	{% for new in other_news %}
+			<div class="item col-md-4 col-xs-12 custom-experience other-item">
+	        	<div class="style-post">
+	          		<span><a href="/news/{{new.id}}/detail/" class="thumbnail thumbnail-custom"><img src="{{ MEDIA_URL }}{{ new.image }}" width="100%"></a></span>
+	          		<a class="title-post" href="/news/{{new.id}}/detail/">{{new.name}}</a>
+	          		<p class="text-limit-rows">{{new.short_description}}</p> <a class="view-detail" href="/news/{{new.id}}/detail/">{% trans "btn.view_detail" %}</a>
+	        	</div>
+	      	</div>
+	      	{% endfor %}
+	    </div>
+  	</div>
+</div>
+{% endif %}
+{% endblock %}

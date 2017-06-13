@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block title %}Promotion Detail{% endblock %}
+{% block extrastylesheet %}
+<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/page_detail.css">
+{% endblock %}
+{% block main_content %} 
+{% if promotion %}
+<div class="page-top">
+    <div class="page-header-img-full">
+        <img src="{{ MEDIA_URL }}{{ promotion.image }}" width="100%">
+        <div class="page-caption">
+            <div class="container">
+                <div class="page-title-detail row">
+                    <div class="col-md-12" align="center">
+                        <p class="big-font-size">{{promotion.name}}</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="custom-icons" align="center">
+                            <div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>      
+    
+<div class="container div-content-layer">
+    <div class="div-content" align="center">
+        {{promotion.content | safe}}
+    </div>
+    <hr class="hr-custom">
+</div>
+{% endif %}
+
+{% if other_promotions %}
+<div class="container">
+    <div class="block-post-involved">
+        <div class="row block-post-title">
+            <div class="col-md-6 col-md-6-custom">
+                <h4>{% trans "promotionpage.other_promotion" %}</h4>
+            </div>
+            <div class="col-md-6 col-md-6-custom">
+                <a class="btn button-all btn-custom-style btn-custom-style-kids" href="{% url 'promotions' %}" role="button">{% trans "promotionpage.btn.all_promotion" %}<span class="glyphicon glyphicon-menu-right"></span></a>
+            </div>
+        </div>
+        <div class="row custom-other-exp">
+            {% for promotion in other_promotions %}
+            <div class="item col-md-4 col-xs-12 custom-promotion other-item">
+                <div class="style-post">
+                    <span><a href="/promotions/{{promotion.id}}/detail/" class="thumbnail thumbnail-custom"><img src="{{ MEDIA_URL }}{{ promotion.image }}" width="100%"></a></span>
+                    <a class="title-post" href="/promotions/{{promotion.id}}/detail/">{{promotion.name}}</a>
+                    <p class="text-limit-rows">{{promotion.short_description}}</p> <a class="view-detail" href="/promotions/{{promotion.id}}/detail/">{% trans "btn.view_detail" %}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

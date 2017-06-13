@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block extrastylesheet %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}assets/css/flexslider.css" type="text/css" media="screen" />
+    <link href="{{ STATIC_URL }}assets/websites/css/helio_photos.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block title %}Helio Photos{% endblock title %}
+{% block extrascript %}
+    <script type="text/javascript" src = "{{ STATIC_URL }}assets/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src = "{{ STATIC_URL }}assets/websites/js/helio_photos.js"></script>
+
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+    <!-- COFFEE PAGE DESCRIPTION -->
+    {% if photos_type %}
+    <div class="page-top">
+        <div class="page-header-img">
+            <div>
+                <img src="{{ STATIC_URL }}assets/websites/images/helio_photos_header.png" width="100%">
+            </div>
+            <div class="page-title" align="center">
+                <div class="col-md-12">
+                    <p class="page-title-text">{{photos_type.name}}</p>
+                </div>
+            </div>
+        </div>
+        <div align="center" class="page-header-text">
+            <div class="form-title">
+                <p class="text-description page_description">{{photos_type.description}}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- CONTENT -->
+    {% if photos %}
+    <div class="wrap row photos-section">
+        {% for photo in photos %}
+        <div class="box col-xs-6 col-sm-4">
+            <div class="box-inner">
+                <img src="{{ MEDIA_URL }}{{photo.image}}" width="100%" height="100%">
+            </div>
+            <div class="box-text">
+                <div class="div-text">
+                    <p class="ablum-name big-font-size">{{photo.name}}</p>
+                    <div class="view-all" style="display: none;">
+                        <p>{{photo.images_len}} {% trans "helio_photo.total_image" %}</p>
+                        {% if photo.images_len > 0 %}
+                        <a id="{{photo.id}}" class="btn btn-custom-style view-images-btn" role="button" data-toggle="modal" >{% trans "btn.view_all" %}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="box-view-more col-xs-6 col-sm-4">
+            <div class="box-inner">
+                
+            </div>
+            <div class="box-text">
+                <div class="div-text">
+                    <p class="ablum-name big-font-size"><i class="fa fa-plus" aria-hidden="true"></i></p>
+                    <p class="ablum-name big-font-size">XEM THÊM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- DOWNLOAD APP BANNER -->
+    <div class="app-banner">
+        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+    </div>
+</div>
+<!-- Modal -->
+<div id="images_modal" class="modal fade custom-modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-header">
+            <label class="number-images">
+                <span class="cur-slide"></span> / <span class="total-slide"></span>
+            </label>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>    
+        </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

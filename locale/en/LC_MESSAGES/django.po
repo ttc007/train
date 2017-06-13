@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-23 03:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+# START MAIN MENU
+msgid "menu.product"
+msgstr "PRODUCT"
+
+msgid "menu.night_life"
+msgstr "NIGHT LIFE"
+
+msgid "menu.powercard"
+msgstr "POWERCARD"
+
+msgid "menu.event"
+msgstr "EVENT"
+
+msgid "menu.promotion"
+msgstr "PROMOTION"
+
+msgid "menu.faq"
+msgstr "FAQs"
+
+msgid "menu.helio_photos"
+msgstr "HELIO PHOTOS"
+# END MAIN MENU
+
+# START SUB MENU
+msgid "menu.submenu.play"
+msgstr "Helio Play"
+
+msgid "menu.submenu.kids"
+msgstr "Helio Kids"
+
+msgid "menu.submenu.night_life"
+msgstr "Night Life"
+
+msgid "menu.submenu.coffee"
+msgstr "Coffee & Bakery"
+
+msgid "menu.submenu.ortherproduct"
+msgstr "Other Product"
+
+msgid "menu.submenu.redemption_store"
+msgstr "Redemption Store"
+# END SUB MENU
+
+# START BUTTON
+msgid "btn.click_now"
+msgstr "Click now"
+
+msgid "btn.view_all"
+msgstr "View all"
+
+msgid "btn.view_more"
+msgstr "View more"
+
+msgid "btn.view_detail"
+msgstr "View detail"
+# END BUTTON
+
+# START HOME PAGE
+msgid "homepage.title.section.game"
+msgstr "ENTERTAINMENT SYSTEM"
+
+msgid "homepage.title.section.redemption_store"
+msgstr "REDEMPTION STORE"
+
+msgid "homepage.title.section.powercard"
+msgstr "POWERCARD"
+
+msgid "homepage.title.section.event"
+msgstr "HELIO CENTER EVENT"
+
+msgid "homepage.title.section.entertaiment"
+msgstr "ENTERTAINMENT CENTER AT DA NANG"
+
+msgid "homepage.text.night_life"
+msgstr "NIGHT LIFE"
+
+msgid "homepage.text.play"
+msgstr "PLAY"
+
+msgid "homepage.text.kids"
+msgstr "KIDS"
+
+msgid "homepage.text.coffee"
+msgstr "COFFEE"
+
+# END HOME PAGE
+
+# START FAQs REDEMPTION STORE
+msgid "redemption_store.title.section.faq"
+msgstr "FREQUENTLY ASKED QUESTION"
+# END FAQs REDEMPTION STORE
+
+# START FAQs POWERCARD
+msgid "powercard.title.section.faq"
+msgstr "FREQUENTLY ASKED QUESTION"
+# END FAQs POWERCARD
+
+# START POWERCARD
+msgid "powercard.btn.view_full"
+msgstr "SHOW MORE"
+# END POWERCARD
+
+# START EXPERIENCE DETAIl
+msgid "experiencepage.btn.all_experience" 
+msgstr "ALL EXPERIENCE"
+
+msgid "experiencepage.other_experience" 
+msgstr "OTHER EXPERIENCE"
+# END EXPERIENCE DETAIl
+
+# START EVENT
+msgid "eventpage.title.all_event" 
+msgstr "ALL EVENT"
+
+msgid "eventpage.btn.all_event" 
+msgstr "ALL EVENT"
+
+msgid "eventpage.other_event" 
+msgstr "OTHER EVENT"
+
+msgid "eventpage.days" 
+msgstr "DAYS"
+
+msgid "eventpage.hours" 
+msgstr "HOURS"
+
+msgid "eventpage.minutes" 
+msgstr "MINUTES"
+
+msgid "eventpage.seconds" 
+msgstr "SECONDS"
+
+msgid "eventpage.finished" 
+msgstr "FINISHED EVENT"
+
+msgid "eventpage.current" 
+msgstr "CURRENT EVENT"
+
+msgid "eventpage.future" 
+msgstr "FUTURE EVENT"
+# END EVENT
+
+# START PROMOTION DETAIl
+msgid "promotionpage.btn.all_promotion" 
+msgstr "ALL PROMOTION"
+
+msgid "promotionpage.other_promotion" 
+msgstr "OTHER PROMOTION"
+
+msgid "promotionpage.menu.all" 
+msgstr "ALL"
+# END PROMOTION DETAIl
+
+# START CAREER DETAIl
+msgid "careerpage.btn.all_career" 
+msgstr "ALL CAREER"
+
+msgid "careerpage.other_career" 
+msgstr "OTHER CAREER"
+# END CAREER DETAIl
+
+# START NEW DETAIl
+msgid "newpage.btn.all_news" 
+msgstr "ALL NEWS"
+
+msgid "newpage.other_new" 
+msgstr "OTHER NEWS"
+# END NEW DETAIl
+
+# START FAQS
+msgid "faqspage.header.title"
+msgstr "FAQs"
+
+msgid "faqspage.header.description"
+msgstr "Frequently asked questions help you have more good experience when you go to Helio Center."
+
+msgid "faqspage.text.support_more"
+msgstr "SUPPORT MORE"
+
+msgid "faqspage.text.contact_us"
+msgstr "CONTACT US"
+# END FAQs
+
+# START CONTACT 
+msgid "contact.header.title"
+msgstr "CONTACT"
+
+msgid "contact.header.description"
+msgstr "Frequently asked questions help you have more good experience when you go to Helio Center. Frequently asked questions help you have more good experience when you go to Helio Center."
+
+msgid "contact.btn.send"
+msgstr "SEND MESSAGE" 
+
+msgid "contact.lable.title.name"
+msgstr "Your name" 
+
+msgid "contact.lable.title.email"
+msgstr "Email" 
+
+msgid "contact.lable.title.phone"
+msgstr "Phone number" 
+
+msgid "contact.lable.title.subject"
+msgstr "Subject" 
+
+msgid "contact.lable.title.message"
+msgstr "Main message"
+
+msgid "contact.message_success"
+msgstr "Your message was sent successfully!"
+
+msgid "contact.message_error"
+msgstr "Please fix errors below"
+
+msgid "This field is required."
+msgstr "This field is required."
+# END CONTACT
+
+# START OTHER PRODUCT
+msgid "other_product.header.title"
+msgstr "OTHER PRODUCT"
+
+msgid "other_product.header.description"
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis nunc est. Proin rutrum viverra neque eu porta. Fusce fringilla bibendum arcu sit amet viverra. Donec sit amet enim a velit varius eleifend eget vitae eros. Nulla in vulputate justo. Suspendisse potenti."
+# END OTHER PRODUCT
+
+# START ADMIN PROMOTION DETAIL
+msgid "admin_promotion.message_success"
+msgstr "Save success!"
+
+msgid "admin_promotion.btn_back_admin"
+msgstr "BACK TO ADMIN PROMOTION"
+
+msgid "admin_promotion.btn_save"
+msgstr "SAVE"
+# START ADMIN PROMOTION DETAIL
+
+# START HELIO PHOTO
+msgid "helio_photo.total_image"
+msgstr "images"
+# END HELIO PHOTO
+
+#START FOOTER
+msgid "footer.contact.address"
+msgstr "2/9 str, Hoa Cuong Bac Ward, Hai Chau Dist, Da Nang City, Viet Nam"
+
+msgid "footer.menu.home"
+msgstr "HOME"
+
+msgid "footer.menu.about"
+msgstr "ABOUTS"
+
+msgid "footer.menu.career"
+msgstr "CAREER"
+
+msgid "footer.menu.contact"
+msgstr "CONTACT"
+
+msgid "footer.menu.news"
+msgstr "NEWS"
+
+msgid "footer.menu.experience"
+msgstr "EXPERIENCE"
+
+msgid "footer.menu.policy"
+msgstr "POLICY"
+
+msgid "footer.menu.terms_of_use"
+msgstr "TERM & CONDITION"   
+
+msgid "footer.text_right"
+msgstr "Powered by"
+
+msgid "footer.text_company"
+msgstr "KhoiPhat, Ltd."   
+#END FOOTER

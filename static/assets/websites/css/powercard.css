@@ -1,0 +1,78 @@
+.card-description {
+	color: #15062b;
+	text-align: left;
+	padding-top: 15px;
+}
+.card-description .powercard-name {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.44;
+	text-transform: uppercase;
+}
+.card-info-section .panel-default {
+	border: none;
+	margin-top: 40px;
+} 
+
+.card-info-section .panel-default .powercard-content {
+	border: none;
+	overflow: hidden;
+	min-height: 400px;
+	padding-bottom: 50px;
+}
+.card-info-section .panel-default .card-description {
+	overflow: hidden;
+	min-height: 200px;
+}
+.kq_power_card .panel-default>.panel-heading.card-header,
+.kq_power_card .panel-default .card-div-bottom  button {
+	background-color: #23194f;
+}
+.kq_member_card .panel-default>.panel-heading.card-header, 
+.kq_member_card .panel-default .card-div-bottom button {
+	background-color: #e436aa;
+}
+.kq_gold_card .panel-default>.panel-heading.card-header,
+.kq_gold_card .panel-default .card-div-bottom button {
+	background-color: #fec231;
+}
+
+.panel-default>.panel-heading.card-header {
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.64;
+	letter-spacing: 1.1px;
+	text-align: center;
+	color: #fff;
+}
+.card-div-bottom {
+	margin-bottom: -15px; 
+}
+.card-info-section .panel-default .panel-body {
+	position: relative;
+}
+.card-info-section .panel-default .panel-body button {
+	width: 100%;
+	position: absolute;
+	height: 48px; 
+	bottom: 0px;
+	border: none;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: 0.8px;
+	text-align: center;
+	padding-top: 8px;
+}
+.height-limit {
+	max-height: 216px;
+	overflow: hidden;
+}
+.app-banner {
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+.faqs-section {
+	margin-top: 60px;
+}

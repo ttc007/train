@@ -1,0 +1,83 @@
+{% load i18n %} 
+
+<div class="container">
+    <div class="header">
+		<div class="well logo-div">
+			<a href="{% url 'home' %}">
+        		<img src="{{ STATIC_URL }}assets/images/logo.png" class="img-responsive" width="173px" height="104px" alt="Image">
+        	</a>
+        </div>
+		<div class="menu-content">	
+			<div class="top-menu">	
+				<div class="navbar navbar-default">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-controls="main-nav" style="margin-right: 0px;">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+					<form id="language_form" action="{% url 'set_language' %}" method="post" class="hidden">
+					    {% csrf_token %}
+					    <select id="choose_language" name="language">
+					        {% for language in languages %}
+					            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+					                {{ language.name_local }} ({{ language.code }})
+					            </option>
+					        {% endfor %}
+					    </select>
+					</form>
+
+
+                    <div class="btn-group menu-language navbar-brand row">
+                    	<!-- {% for language in languages %} 
+				            <a class="btn-custom-header {% if LANGUAGE_CODE ==  language.code %} active {% endif %}" href="#" tmp="{{ language.code }}">{{ language.name_local }}</a>
+				        {% endfor %} -->
+				        <!-- <input class="input-search hidden" placeholder="Tìm trên Helio "/>
+					    <a href="#" class="hidden-xs search-btn">
+					    	<span class="glyphicon glyphicon-search "></span>
+					    </a> -->
+					</div>
+					<div class="right-nav pull-right hidden-xs">
+						{% if time_active %}
+	            		<div class="time-wrapper">
+	            			{{time_active.content | safe}}
+	            		</div>
+	            		{% endif %}
+	            	</div>
+				</div>
+			</div>
+			
+			<nav class="navbar navbar-default header-nav">
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse main-menu" id="main-nav" >
+					<ul class="nav navbar-nav">
+                        <li class="dropdown-submenu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "menu.product" %} <b class='glyphicon' id='menu-caret'></b></a>
+							<ul class="dropdown-menu dropdown-menu-custom">
+								<li><a href="{% url 'helio_play' %}">{% trans "menu.submenu.play" %}</a></li>
+								<li><a href="{% url 'helio_kids' %}">{% trans "menu.submenu.kids" %}</a></li>
+								<!-- <li><a href="{% url 'night_life' %}">{% trans "menu.submenu.night_life" %}</a></li> -->
+								<li><a href="{% url 'coffee_bakery' %}">{% trans "menu.submenu.coffee" %}</a></li>
+								<li><a href="{% url 'redemption_store' %}">{% trans "menu.submenu.redemption_store" %}</a></li>
+								<li><a href="{% url 'other_product' %}">{% trans "menu.submenu.ortherproduct" %}</a></li>
+							</ul>
+						</li>
+                        <li><a href="{% url 'night_life' %}">{% trans "menu.night_life" %}</a></li>
+                        <li><a href="{% url 'power_card' %}">{% trans "menu.powercard" %}</a></li>
+                        <li><a href="{% url 'events' %}">{% trans "menu.event" %}</a></li>
+                        <li><a href="{% url 'promotions' %}">{% trans "menu.promotion" %}</a></li>
+                        <li><a href="{% url 'helio_photos' %}">{% trans "menu.helio_photos" %}</a></li>
+                        <li><a href="{% url 'faqs' %}">{% trans "menu.faq" %}</a></li>
+                        <li class="time-info visible-xs">
+	                        <div class="time-wrapper">
+		            			<p>THỨ HAI - THỨ SÁU | 17:30 - 18:30</p>
+		            			<p>THỨ BAY - CHU NHAT | 17:30 - 18:30</p>
+		            		</div>
+	            		</li>
+                    </ul>
+			    </div><!-- /.navbar-collapse -->
+			</nav>
+		</div>
+	</div> 
+</div>

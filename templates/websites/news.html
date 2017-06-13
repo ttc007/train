@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block extrastylesheet %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/news.css">
+{% endblock %}
+{% block title %}News{% endblock title %}
+{% block extrascript %}
+	<script src = "{{ STATIC_URL }}assets/websites/js/news.js"></script>
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+	<!-- CARD PAGE DESCRIPTION -->
+	{% if news_hots %}
+	<div class="page-top">
+		<div class="page-header-img">
+			<div id="news_carousel" class="carousel slide carousel-custom" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators carousel-indicators-custom">
+					{% for new in news_hots %}
+					<li data-target="#news_carousel" data-slide-to="{{forloop.counter0}}" class="{% if forloop.counter0 == 0 %} active {% endif %}"></li>
+					{% endfor %}
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					{% for new in news_hots %}
+					<div class="item {% if forloop.counter0 == 0 %} active {% endif %}">
+						<a href="/news/{{new.id}}/detail/" target="_blank">
+							<img class="img-slide-news" src="{{ MEDIA_URL }}{{ new.image }}" alt="Helio" width="100%">
+							<div class="carousel-caption carousel-caption-custom">
+								<p class="big-font-size">
+									{{new.name}}
+								</p>
+							</div>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+
+	<!-- CONTENT -->
+	{% if news %}
+	<div class="row news-content row-equal">
+		{% for new in news %}
+		<div class="item col-md-4 col-xs-12 custom-new news-div">
+			<div class="style-post">
+				<span><a href="/news/{{new.id}}/detail/" class="thumbnail thumbnail-custom"><img src="{{ MEDIA_URL }}{{ new.image }}" width="100%"></a></span>
+				<a class="title-post" href="/news/{{new.id}}/detail/">
+					{{new.name}}
+				</a>
+				<p class="text-limit-rows short_description">
+					{{new.short_description}}
+				</p> 
+				<a class="view-detail" href="/news/{{new.id}}/detail/">{% trans "btn.view_detail" %}</a>
+			</div>
+		</div>
+		{% endfor %}
+		<div class="div-view-more col-md-12" align="center">
+			<a class="btn-view-more btn-custom-style btn-custom-style-news" role="button">{% trans "btn.view_more" %}<span class="glyphicon glyphicon-chevron-down glyphicon-custom"></span></a>
+				</div>
+	</div>
+	{% endif %}
+	<!-- DOWNLOAD APP BANNER -->
+	<div class="app-banner">
+		<a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+	</div>
+</div>
+{% endblock %}

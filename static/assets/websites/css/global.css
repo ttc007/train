@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz");
+@import url("https://fonts.googleapis.com/css?family=Cabin");
+
+body {
+    font-family: "Cabin";
+    background-color: #15062b;
+    color: #fff;
+}
+
+p {
+    font-family: "Cabin";
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+img {
+    width: 100%;
+}
+p.short_description {
+    font-size: 16px;
+}
+
+p.page_description {
+    font-size: 20px;
+}
+
+/* start custom modal bootstrap */
+.modal-backdrop.fade.in {
+    opacity: 1;
+} 
+.custom-modal .modal-header, 
+.custom-modal .modal-body {
+    border-bottom: none;
+    padding: 0px;
+}
+.custom-modal .modal-header .close {
+    font-size: 76px;
+    color: #fff;
+    opacity: 1;
+    margin-right: 5px;
+    font-weight: normal;
+}
+.custom-modal .modal-content {
+    background: transparent;
+}
+/* end custom modal bootstrap */
+
+.big-font-size {
+    font-size: 72px;
+    font-family: "Yanone Kaffeesatz";
+    line-height: 80px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.title-content {
+    font-family: "Yanone Kaffeesatz";
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1.8;
+    line-height: 40px;
+}
+/*Event notification*/
+.text-center.event-new {
+    height: 48px;
+    overflow: hidden;
+}
+.text-center.event-new marquee {
+    background-image: linear-gradient(to right, #e436aa, #2c1b76);
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 0px;
+    font-family: "Cabin";
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    white-space:nowrap;
+}
+.text-center.event-new marquee span { 
+    margin-right: 20%;
+}
+.fa.fa-bell-o {
+    transform: rotate(30deg);
+    margin-right: 10px;
+}
+/*LIMIT SHORT DESCRIPTION*/
+.text-limit-rows {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   max-height: 100px;
+    -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+}
+
+/*HEADER*/
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover {
+    background: transparent;
+}
+
+
+.header {
+    padding: 15px 0 0px 0px;
+    min-height: 150px;
+    position: relative;
+}
+.header .top-menu, 
+.header .navbar.header-nav {
+    margin-left: 180px;
+}
+
+.header .well.logo-div {
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    position: absolute;
+    width: 130px;
+}
+.well.logo-div img {
+    height: 100%;
+}
+
+.header .navbar.header-nav {
+    margin-bottom: 0px;
+} 
+.navbar-default {
+    background: transparent;
+    border: none;
+}
+
+.main-menu .navbar-nav li a {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Yanone Kaffeesatz";
+    color: #fff;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.main-menu  .navbar-nav>li {
+    padding: 0 40px 0 0;
+    min-height: 57px;
+}
+.main-menu .navbar-nav>li.active>a,
+.main-menu .navbar-nav>li.active>a:hover,
+.main-menu .navbar-nav>li>a:focus, 
+.main-menu .navbar-nav>li>a:hover, 
+.navbar-default .main-menu .navbar-nav>.open>a:focus {
+    color: #da139a;
+    border-bottom: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #e436aa, #2c1b76);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+}
+.dropdown-menu-custom {
+    background-color: #15062b;
+}
+.navbar-default .main-menu ul.dropdown-menu {
+    padding: 0px;
+}
+.navbar-default .main-menu .dropdown-menu>li>a:hover,
+.navbar-default .main-menu .dropdown-menu>li>a:focus,
+.navbar-default .main-menu .dropdown-menu>li.active>a,
+.navbar-default .main-menu .navbar-nav .open .dropdown-menu>.active>a, 
+.navbar-default .main-menu .navbar-nav .open .dropdown-menu>.active>a:focus, 
+.navbar-default .main-menu .navbar-nav .open .dropdown-menu>.active>a:hover
+
+ {
+    background-color: #fec231;
+    color: #15062b;
+}
+.navbar-default .main-menu .dropdown-menu>li>a {
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar.navbar-default.header-nav {
+    min-height: 0px;
+}
+.main-menu {
+    padding: 0px;
+}
+
+.menu-language a.btn-custom-header {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Cabin";
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.menu-language a.active {
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: linear-gradient(10deg, #e436aa, #2c1b76);
+  border-image-slice: 1;
+  text-decoration: none;
+}
+
+.menu-language a.btn-custom-header:focus, 
+.menu-language a.btn-custom-header:hover {
+  text-decoration: none;
+  color: #e436aa;
+}
+
+/*END HEADER*/
+
+.time-wrapper p {
+    font-family: "Cabin";
+    font-size: 14px;
+    color: #35bdeb;
+    line-height: 18px;
+    margin: 0px;
+    text-align: right;
+}
+
+.page-title {
+    width: 100%;
+    position: absolute;
+    bottom: -110px;
+    
+}
+.page-header-img {
+    position: relative;
+    margin-bottom: 60px;
+}
+p.page-title-text {
+    font-family: "Yanone Kaffeesatz";
+    font-size: 176px;
+    font-weight: bold;
+    line-height: 1.11;
+    letter-spacing: 8.8px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.textwidget .fa {
+    margin-right: 10px;
+}
+
+
+#footer-wrapper {
+    color: #fff;
+    background-image: linear-gradient(347deg, #07487b, #3c0034);
+}
+
+.footer-contact {
+    margin-bottom: 35px;
+}
+
+.box_footer {
+    padding-top: 25px;
+}
+
+.footer-contact img {
+    width: 160px;
+}
+
+a.btn-custom-style {
+    border-radius: 0px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: "Yanone Kaffeesatz";
+    font-weight: bold;
+    border-style: solid;
+    color: #fff;
+    border-width: 1px;
+    border-image-slice: 1;
+    border-style: solid;
+    border-image-source: linear-gradient(16deg, #e436aa, #2c1b76);
+    padding: 9px 15px 3px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-color: #fff;
+}
+.active>a.btn-custom-style,
+a.btn-custom-style:focus, 
+a.btn-custom-style:hover {
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(16deg, #e436aa, #2c1b76);
+    border-style: solid;
+    border-width: 1px;
+    border-image-source: linear-gradient(16deg, #e436aa, #2c1b76);
+    border-image-slice: 1;
+}
+
+.border-dot {
+    border: 0px;
+    border-bottom: 3px;
+    border-top: 3px;
+    border-style: dotted;
+}
+.page-header-text {
+    width: 70%;
+    padding-top: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.app-banner {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+/*ROW EQUAL FOR EXPERIENCE AND CAREER*/
+.row-equal {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*START Helio play and kids*/
+.cursor-custom {
+    cursor: default;
+}
+/*END Helio play and kids*/
+
+/*START CUSTOM HR*/
+.hr-custom {
+    border-color: #802ca2;
+    margin: 50px 0px;
+}
+/*END CUSTOM HR*/
+/*FOOTER*/
+.menuwidget.nav li {
+    width: 100%;
+} 
+.menuwidget.nav li a {
+    font-size: 18px;
+    font-family: "Yanone Kaffeesatz";
+    color: #fff;
+}
+.menuwidget.nav li a:hover {
+    background: transparent;
+}
+.helio-footer-info p, 
+.contact-text p {
+    font-size: 14px;
+}
+.search-btn {
+    color: #fff;
+}
+.search-btn .glyphicon-search {
+    top: 5px;
+}
+.custom-icon {
+    margin: 0px 20px;
+    font-size: 30px;
+    color: #fff;
+}
+.icon-footer a:hover,
+.icon-footer a:focus {
+    color: #fff;
+}
+.icon-footer .icon-youtube-play:hover,
+.icon-footer .icon-youtube-play:focus {
+    color: #e336b6;
+}
+.icon-youtube-play {
+    color: #e336b6;
+}
+.footer-text {
+    display: inline;
+}
+.footer-text-color {
+    color: #e336b6;
+    display: inline;
+}
+
+input.input-search {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 350px;
+    outline: 0;
+}
+.glyphicon-custom {
+    top: 0px;
+    margin-left: 8px;
+    font-weight: normal;
+    font-size: 18px;
+}
+/*Apply for mobile*/
+@media (max-width: 991px) {
+    .big-font-size {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .helio-footer-info div.icon-footer {
+        text-align: left;
+        
+    }
+    .helio-footer-info div.pull-right {
+        float: none !important; 
+    }
+
+}
+
+@media (max-width: 767px) {
+    p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    p.short_description {
+        font-size: 14px;
+    }
+    p.page_description {
+        font-size: 18px;
+    }
+    .big-font-size {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .title-content {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    a.btn-custom-style {
+        font-size: 20px;
+        padding-top: 7px;
+    }
+
+
+    .navbar-toggle.pull-left {
+        margin-left: 10px;
+    }
+    .menu-language {
+        margin-left: 0px;
+    }
+
+    .page-title {
+        position: static;
+        margin-top: 50px;
+    }
+    p.page-title-text {
+        font-size: 72px;
+        letter-spacing: 3px;
+    }
+    div.page-header-text {
+        padding-top: 0px;
+    }
+    .page-header-img {
+        margin-bottom: 0px;
+    } 
+    .header {
+        min-height: 110px;
+    }
+    .header .well.logo-div {
+        width: 95px;
+    }
+    .header .top-menu {
+        margin-left: 95px;
+    }
+    .header .navbar.header-nav {
+        padding-left: 0px;
+        margin: 50px -15px 0px;
+    }
+
+    .main-menu .navbar-nav {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .main-menu  .navbar-nav>li {
+        border-bottom: 1px solid #ccc;
+        padding: 0px;
+    }
+
+    .main-menu .navbar-nav li a, 
+    .time-info .time-wrapper {
+        padding: 25px 15px 20px 15px;
+    }
+    .time-info .time-wrapper p{
+        text-align: left;
+    }
+    .main-menu .navbar-nav .dropdown-menu>li>a {
+        padding: 20px 30px 15px 30px;
+        position: relative;
+    }
+    .navbar-default .main-menu .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+    }
+    #menu-caret {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    #menu-caret:before {
+        content: "\e113";
+    }
+    .dropdown-submenu.open #menu-caret:before {
+        content: "\e114";
+    }
+
+    .main-menu .navbar-nav>li.active>a,
+    .main-menu .navbar-nav>li.active>a:hover,
+    .main-menu .navbar-nav>li>a:focus, 
+    .main-menu .navbar-nav>li>a:hover, 
+    .navbar-default .main-menu .navbar-nav>.open>a:focus {
+        color: #da139a;
+        border-bottom: none;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+/* Safari 6.1-10.0*/
+@media screen and (min-color-index:0) 
+and(-webkit-min-device-pixel-ratio:0) { @media
+{
+    a.btn-custom-style {
+        padding-top: 3px;
+    }
+}}
+/* Safari 10.1+ */
+@media not all and (min-resolution:.001dpcm) { @media
+{
+    a.btn-custom-style {
+        padding-top: 3px;
+    }
+}}

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% block extrastylesheet %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/experience.css">
+{% endblock %}
+{% block title %}Experience - Trải nghiệm{% endblock title %}
+{% block extrascript %}
+	<script src = "{{ STATIC_URL }}assets/websites/js/experience.js"></script>
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+	<!-- CARD PAGE DESCRIPTION -->
+	{% if result.experiences %}
+	<div class="page-top">
+		<div class="page-header-img">
+			<div id="experiences_carousel" class="carousel slide carousel-custom" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators carousel-indicators-custom">
+					{% for experience in result.experiences_hots %}
+					<li data-target="#experiences_carousel" data-slide-to="{{forloop.counter0}}" class="{% if forloop.counter0 == 0 %} active {% endif %}"></li>
+					{% endfor %}
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					{% for experience in result.experiences_hots %}
+					<div class="item {% if forloop.counter0 == 0 %} active {% endif %}">
+						<a href="/experience/{{experience.id}}/detail/" target="_blank">
+							<img class="img-slide-experience" src="{{ MEDIA_URL }}{{ experience.image }}" alt="Helio" width="100%">
+							<div class="carousel-caption carousel-caption-custom">
+								<p class="big-font-size">
+									{{experience.name}}
+								</p>
+							</div>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+
+	<!-- CONTENT -->
+	{% if result.experiences %}
+	<div class="row experiences-content row-equal">
+		{% for experience in result.experiences %}
+		<div class="item col-md-4 col-xs-12 custom-experience experiences-div">
+			<div class="style-post">
+				<span><a href="/experience/{{experience.id}}/detail/" class="thumbnail thumbnail-custom"><img src="{{ MEDIA_URL }}{{ experience.image }}" width="100%"></a></span>
+				<a class="title-post" href="/experience/{{experience.id}}/detail/">
+					{{experience.name}}
+				</a>
+				<p class="text-limit-rows short_description">
+					{{experience.short_description}}
+				</p> 
+				<a class="view-detail" href="/experience/{{experience.id}}/detail/">{% trans "btn.view_detail" %}</a>
+			</div>
+		</div>
+		{% endfor %}
+		<div class="div-view-more col-md-12" align="center">
+			<a class="btn-view-more btn-custom-style btn-custom-style-experiences" role="button">{% trans "btn.view_more" %}<span class="glyphicon glyphicon-chevron-down glyphicon-custom"></span></a>
+        </div>
+	</div>
+	{% endif %}
+	<!-- DOWNLOAD APP BANNER -->
+	<div class="app-banner">
+		<a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+Hi {{name}},
+
+{{message}}
+
+Thanks,
+The Helio account team

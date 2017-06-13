@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block extrastylesheet %}
+    <link href="{{ STATIC_URL }}assets/websites/css/image_section.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block title %}Coffee and bakery - Cà phê & Bánh{% endblock title %}
+{% block extrascript %}
+
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+    <!-- COFFEE PAGE DESCRIPTION -->
+    {% if page_info %}
+    <div class="page-top">
+        <div class="page-header-img">
+            <div>
+                <img src="{{ STATIC_URL }}assets/websites/images/helio_coffee_header.png" width="100%">
+            </div>
+            <div class="page-title" align="center">
+                <div class="col-md-12">
+                    <p class="page-title-text">{{page_info.name}}</p>
+                </div>
+            </div>
+        </div>
+        <div align="center" class="page-header-text">
+            <div class="form-title">
+                <p class="text-description page_description">{{page_info.short_description}}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if list_images %}
+    <!-- CONTENT -->
+    <div class="wrap">
+        {% for item in list_images %}
+        <div class="box{{forloop.counter}}">
+            <div class="box-inner">
+                <img src="{{ MEDIA_URL }}{{item.image}}">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <!-- DOWNLOAD APP BANNER -->
+    <div class="app-banner">
+        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+    </div>
+</div>
+
+{% endblock %}

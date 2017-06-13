@@ -1,0 +1,16 @@
+.div-content {
+    margin: 150px 0 50px;
+}
+.title-term-condition {
+    margin-bottom: 50px;
+}
+.date-term-conditon {
+    margin-bottom: 20px;
+}
+.div-content a {
+    text-decoration: none;
+    color: #337ab7;
+}
+p.page-title-text {
+    max-width: 980px;
+}

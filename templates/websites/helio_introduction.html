@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block title %}Helio Introduction - Giới thiệu Helio{% endblock %}
+{% block extrastylesheet %}
+    <link href="{{ STATIC_URL }}assets/websites/css/helio_introduction.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block extrascript %}
+   <!--  <script src = "{{ STATIC_URL }}assets/websites/js/powercard.js"></script> -->
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+    <!-- CARD PAGE DESCRIPTION -->
+    {% if about_type %}
+    <div class="page-top">
+        <div class="page-header-img">
+            <div>
+                <img src="{{ STATIC_URL }}assets/websites/images/helio-about-header.png" width="100%">
+            </div>
+            <div class="page-title" align="center">
+                <div class="col-md-12">
+                    <p class="page-title-text">{{about_type.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if abouts %}
+    <!-- button -->
+    <ul class="nav nav-pills nav-justified intro-btn-group button-custom">
+        {% for about in abouts %}
+        <li class="{% if forloop.counter0 == 0 %} active {% endif %}">
+            <a href="#about_{{about.id}}" role="tab" data-toggle="tab" class="btn-custom-style">{{about.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <!-- CONTENT -->
+    <div class="content-section">
+        <div class="tab-content">
+            {% for about in abouts %}
+            <div role="tabpanel" class="tab-pane {% if forloop.counter0 == 0 %} active {% endif %}" id="about_{{about.id}}">
+                {{about.content | safe}}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="content-image-section">
+            <div class="image-section" align="center">
+                <img src="{{ STATIC_URL }}assets/websites/images/img-section.png">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- DOWNLOAD APP BANNER -->
+    <div class="app-banner">
+        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+    </div>
+</div>
+
+{% endblock %}

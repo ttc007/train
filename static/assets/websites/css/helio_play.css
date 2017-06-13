@@ -1,0 +1,152 @@
+/*Button*/
+.play-btn-section {
+    width: 67.5%;
+    position: relative;
+    margin: auto;
+}
+.play-btn-group {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-right: -2px;
+    margin-left: -2px;
+}
+.play-btn-group li a.btn-custom-style:hover,
+.play-btn-group li a.btn-custom-style:focus,
+.play-btn-group li a {
+    border: 1px solid #000;
+    background-color: #25618a;
+    border-radius: 0px;
+    background-image: none;
+    font-size: 30px;
+}
+.play-btn-group li {
+    padding-bottom: 25px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+.play-btn-group li a.btn-custom-style {
+    padding-right: 0px;
+    padding-left: 0px;
+    letter-spacing: 0px;
+    font-size: 30px;
+}
+.play-btn-group li.active a.btn-custom-style {
+    background-image: none;
+    background-color: #36bdeb;
+    border: 1px solid #000;
+    letter-spacing: 0px;
+    font-size: 30px;
+}
+.play-btn-group li.active a.btn-custom-style:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-width: 20px 127px 0;
+    border-style: solid;
+    border-color: #36bdeb transparent transparent transparent;
+}  
+.content-section {
+    font-family: "Yanone Kaffeesatz";
+}
+/*END BUTTON*/
+
+/*SLIDE*/
+
+.short-description {
+    margin-top: 50px;
+}
+
+.short-description .title-content.game-name {
+    color: #fec231;
+    text-transform: uppercase;
+}
+.short-description {
+    margin-top: 50px;
+}
+.short-description .title-content.game-name {
+    color: #fec231;
+    text-transform: uppercase;
+}
+.image-hidden-sm-up {
+    display: none;
+}
+
+.div-view-more {
+    margin-top: 50px;
+}
+/*END SLIDE*/
+
+/*GAME CONTENT CSS*/
+.content-pull-right .item-content-text {
+    background: url("../images/bg_play_left.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.content-pull-left .item-content-text {
+    background: url("../images/bg_play_right.png") no-repeat;
+    background-size: 100% 100%;
+}
+a.btn-custom-style.btn-custom-style-play {
+    border-image-source: linear-gradient(16deg, #0095bb, #fff);
+}
+.active a.btn-custom-style.btn-custom-style-play:focus,
+a.btn-custom-style.btn-custom-style-play:focus, 
+a.btn-custom-style.btn-custom-style-play:hover {
+    color: #0095bb;
+    background-color: #fff;
+    border-image-source: linear-gradient(16deg, #0095bb, #fff);
+    background-image: none;
+}
+/*END GAME CONTENT CSS*/
+
+/*MEDIA FOR BUTTON*/
+@media (max-width: 1199px) { 
+    .play-btn-group li.active a.btn-custom-style:after {
+        content: none;
+    }
+    .carousel .prevButton,
+    .carousel .nextButton {
+        top: 178px;
+    }
+} 
+
+@media (max-width: 991px) {
+    .content-pull-left .item-content-text,
+    .content-pull-right .item-content-text
+    {
+        background-image: linear-gradient(to top, #25618a, #36bdeb);
+        background-size: 100% 100%;
+    }
+    a.btn-custom-style.btn-custom-style-play {
+        border-image-source: linear-gradient(16deg, #0095bb, #fff);
+    }
+}
+
+@media (max-width: 767px) { 
+    .play-btn-group li a.btn-custom-style:hover,
+    .play-btn-group li a.btn-custom-style:focus,
+    .play-btn-group li a {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    .play-btn-group li {
+        padding-bottom: 15px;
+    }
+    .short-description {
+        margin-top: 30px;
+    }
+    .hr-custom-play {
+        margin-top: 55px;
+    }
+    .play-btn-group li.active a.btn-custom-style {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    .play-btn-group li a.btn-custom-style {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+}

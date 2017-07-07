@@ -9,7 +9,7 @@ translator.register(Category, CategoryTranslationOptions)
 
 
 class TypeTranslationOptions(TranslationOptions):
-    fields = ('name', 'description', 'description_game')
+    fields = ('name', 'description', 'description_detail')
 
 translator.register(Type, TypeTranslationOptions)
 
@@ -89,3 +89,14 @@ class AdvertisementTranslationOptions(TranslationOptions):
     fields = ('name', )
 
 translator.register(Advertisement, AdvertisementTranslationOptions)
+
+
+class NotificationTranslationOptions(TranslationOptions):
+    fields = ('subject', 'message', )
+
+translator.register(Notification, NotificationTranslationOptions)
+
+class CategoryNotificationTranslationOptions(TranslationOptions):
+    fields = ('name', )
+
+translator.register(Category_Notification, CategoryNotificationTranslationOptions)

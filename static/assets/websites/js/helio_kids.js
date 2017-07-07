@@ -41,13 +41,14 @@ var KidsFunction = (function ($) {
             $(element).carousel({
                 carouselWidth: content_width,
                 carouselHeight: h_carousel,
-                directionNav:true,    
+                directionNav:true,
                 shadow:false, 
                 frontWidth:w,
                 frontHeight:h,
                 hMargin: 0.3,
                 vMargin: 0.8,
-                short_description: true
+                short_description: true,
+                mouse:false
             });
             $(element).find(".prevButton").css('top', h_bw + 'px');
             $(element).find(".nextButton").css('top', h_bw + 'px');

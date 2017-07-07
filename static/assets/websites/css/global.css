@@ -1,5 +1,69 @@
-@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz");
-@import url("https://fonts.googleapis.com/css?family=Cabin");
+/*@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz");*/
+/*@import url("https://fonts.googleapis.com/css?family=Cabin");*/
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('../../fonts/Cabin-Regular.eot');
+    src: url('../../fonts/Cabin-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Cabin-Regular.woff') format('woff'),
+        url('../../fonts/Cabin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('../../fonts/Cabin-Regular_1.eot');
+    src: url('../../fonts/Cabin-Regular_1.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Cabin-Regular_1.woff') format('woff'),
+        url('../../fonts/Cabin-Regular_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('../../fonts/Cabin-Regular_2.eot');
+    src: url('../../fonts/Cabin-Regular_2.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Cabin-Regular_2.woff') format('woff'),
+        url('../../fonts/Cabin-Regular_2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Yanone facefont */
+
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    src: url('../../fonts/YanoneKaffeesatz-Regular_1.eot');
+    src: url('../../fonts/YanoneKaffeesatz-Regular_1.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/YanoneKaffeesatz-Regular_1.woff') format('woff'),
+         url('../../fonts/YanoneKaffeesatz-Regular_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    src: url('../../fonts/YanoneKaffeesatz-Regular_2.eot');
+    src: url('../../fonts/YanoneKaffeesatz-Regular_2.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/YanoneKaffeesatz-Regular_2.woff') format('woff'),
+         url('../../fonts/YanoneKaffeesatz-Regular_2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    src: url('../../fonts/YanoneKaffeesatz-Regular_3.eot');
+    src: url('../../fonts/YanoneKaffeesatz-Regular_3.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/YanoneKaffeesatz-Regular_3.woff') format('woff'),
+         url('../../fonts/YanoneKaffeesatz-Regular_3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 body {
     font-family: "Cabin";
@@ -52,6 +116,7 @@ p.page_description {
     letter-spacing: 3px;
     font-weight: bold;
 }
+
 .title-content {
     font-family: "Yanone Kaffeesatz";
     font-size: 36px;
@@ -246,7 +311,17 @@ p.page-title-text {
     color: #fff;
     background-image: linear-gradient(347deg, #07487b, #3c0034);
 }
-
+#footer-wrapper .menuwidget a:hover{
+    color: #da139a;
+    text-decoration: underline;
+}
+#footer-wrapper #email-contact{
+    color: #fff;
+}
+#footer-wrapper #email-contact:hover{
+    color: #da139a;
+    text-decoration: underline;
+}
 .footer-contact {
     margin-bottom: 35px;
 }
@@ -268,7 +343,7 @@ a.btn-custom-style {
     font-weight: bold;
     border-style: solid;
     color: #fff;
-    border-width: 1px;
+    border-width: 2px;
     border-image-slice: 1;
     border-style: solid;
     border-image-source: linear-gradient(16deg, #e436aa, #2c1b76);
@@ -306,7 +381,10 @@ a.btn-custom-style:hover {
     margin-top: 50px;
     margin-bottom: 80px;
 }
-
+.banner3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
 /*ROW EQUAL FOR EXPERIENCE AND CAREER*/
 .row-equal {
     display: flex;
@@ -369,6 +447,7 @@ a.btn-custom-style:hover {
     color: #e336b6;
     display: inline;
 }
+
 
 input.input-search {
     background-color: transparent;
@@ -521,3 +600,17 @@ and(-webkit-min-device-pixel-ratio:0) { @media
         padding-top: 3px;
     }
 }}
+
+
+/* IE10 and hight and max-with:991px*/
+@media all and (-ms-high-contrast:none) and (min-width: 991px){
+    .big-font-size {
+        font-size: 60px;
+    }
+}
+@media (min-width: 768px){
+    /* hover menu navbar */
+    .header .header-nav ul li:hover ul{
+        display: block;
+    }
+}

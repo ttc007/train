@@ -76,3 +76,12 @@
 .faqs-section {
 	margin-top: 60px;
 }
+
+/*margin when screen > 991px*/
+@media (min-width: 991px){
+.faqs-content {
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+}

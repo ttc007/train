@@ -127,8 +127,6 @@ a.btn-custom-style.btn-custom-style-news:hover {
         border-color: #bd197c;
         border-radius: 0px;
     }
-<<<<<<< HEAD
-=======
     .big-font-size {
         font-size: 20px;
         font-family: "Yanone Kaffeesatz";
@@ -138,19 +136,18 @@ a.btn-custom-style.btn-custom-style-news:hover {
     div.carousel-caption-custom > .big-font-size {
         line-height: 25px;
     }
->>>>>>> 5f8446d54af8d0c9f7ee795db1ece8c24617c393
+
     .carousel-caption-custom {
         width: 100%;
-    }
-}
-<<<<<<< HEAD
-=======
-@media (max-width: 992px) {
-    .carousel-caption-custom {
         top: 15%;
         width: 80%;
         left: 10%;
         right: 10%;
     }
 }
->>>>>>> 5f8446d54af8d0c9f7ee795db1ece8c24617c393
+@media all and (-ms-high-contrast:none) and (min-width: 991px){
+      /* IE10 and hight and max-with:991px*/
+    .big-font-size {
+        font-size: 60px;
+    }
+}

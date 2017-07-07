@@ -18,5 +18,5 @@ class CoreConfig(AppConfig):
     name = 'core'
 
     # def ready(self):
-    #     print "Connect Core Config"
+        # import signals
     #     post_migrate.connect(add_user_permissions, sender=self)

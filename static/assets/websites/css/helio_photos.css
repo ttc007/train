@@ -58,6 +58,11 @@
     border: 4px solid #00fff3;
 }
 
+.flex-direction-nav a:before {
+  color: #fff;
+  line-height: 1;
+}
+
 @media (max-width: 991px) {
     .box-text .ablum-name {
         font-size: 20px;
@@ -67,3 +72,4 @@
         margin-bottom: 3px;
     }
 }
+

@@ -1,4 +1,4 @@
-Hello {{user.first_name}} {{user.last_name}}, you have registered for a Helio center.
+Hello {{user.first_name}} {{user.last_name}}, you have registered for the Helio center.
 
 Use this account email to sign in to 
 helio.vn.com on your computer or mobile device to enjoy a more personalized experience.

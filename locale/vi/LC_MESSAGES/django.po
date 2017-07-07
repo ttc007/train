@@ -253,8 +253,11 @@ msgstr "Ngoài những sản phẩm của Helio center như Helio Play, helio Ki
 msgid "admin_promotion.message_success"
 msgstr "Lưu thành công!"
 
+msgid "admin_promotion.message_promotion_install"
+msgstr "Khuyến mãi dành cho người dùng cài đặt ứng dụng lần đầu. Chức năng này không được áp dụng."
+
 msgid "admin_promotion.btn_back_admin"
-msgstr "TRỞ VỀ ADMIN PROMOTION"
+msgstr "TRỞ VỀ QUẢN LÝ KHUYẾN MÃI"
 
 msgid "admin_promotion.btn_save"
 msgstr "LƯU"
@@ -299,3 +302,170 @@ msgstr "Một sản phẩm vui chơi đến từ"
 msgid "footer.text_company"
 msgstr "Khởi Phát, Ltd."     
 #END FOOTER
+
+#START API
+msgid "Internal Server Error. Please Contact Administrator."
+msgstr "Lỗi Máy chủ Nội bộ. Xin vui lòng liên hệ với Quản trị viên."
+
+msgid "The device_uid field is required."
+msgstr "Trường device_uid không được bỏ trống."
+
+msgid "Connect device successful."
+msgstr "Kết nối thiết bị thành công."
+
+msgid "Anonymous User Cannot Call This Action."
+msgstr "Người dùng chưa chưa đăng ký. Không thể gọi hành động này."
+
+msgid "Disconnect device successful."
+msgstr "Ngắt kết nối thiết bị thành công."
+
+msgid "Cannot disconnect device. DeviceID not found."
+msgstr "Không thể ngắt kết nối thiết bị. Không tìm thấy DeviceID."
+
+msgid "Turn off notification successful."
+msgstr "Tắt thông báo thành công."
+
+msgid "Turn on notification successful."
+msgstr "Bật thông báo thành công."
+
+msgid "The email field is required."
+msgstr "Trường email không được bỏ trống."
+
+msgid "Send security code to email successfully."
+msgstr "Gửi mã bảo mật đến email thành công."
+
+msgid "Password does not match."
+msgstr "Mật khẩu không hợp lệ."
+
+msgid "Reset Password Successfully."
+msgstr "Đặt lại mật khẩu thành công."
+
+msgid "The email or secure code matching query does not exist."
+msgstr "Email hoặc mã bảo mật không đúng."
+
+msgid "Update Avatar Successfully."
+msgstr "Cập nhật Avatar thành công."
+
+msgid "Upload avatar error. Please contact administartor."
+msgstr "Tải lên hình đại diện lỗi. Vui lòng liên hệ với quản trị viên"
+
+msgid "Update infomation user successfully."
+msgstr "Cập nhật thông tin người dùng thành công."
+
+msgid "Update device unique successfully."
+msgstr "Cập nhật mã máy thiết bị thành công."
+
+msgid "Cannot update infomation user. Please contact administrator."
+msgstr "Không thể cập nhật thông tin người dùng. Vui lòng liên hệ với quản trị viên."
+
+msgid "OldPassword does not match."
+msgstr "Mặt khẩu cũ không khớp."
+
+msgid "Update password for user successfully."
+msgstr "Cập nhật mật khẩu thành công."
+
+msgid "Cannot update password for user. Please contact administrator."
+msgstr "Không thể cập nhật mật khẩu. Vui lòng liên hệ với quản trị viên."
+
+msgid "The promotion_id is required."
+msgstr "Trường promotion_id không được bỏ trống."
+
+msgid "Error. User or Deivce Have get gift from promotion."
+msgstr "Lỗi. Người dùng hoặc thiết bị đã nhận được quà tặng khuyến mãi."
+
+msgid "Promotion for user does not matching. Please check again."
+msgstr "Khuyến mãi này không dành cho người dùng hiện tại. Vui lòng kiểm tra lại."
+
+msgid "Your account not apply current promotion. Please contact administrator."
+msgstr "Tài khoản của bạn không áp dụng khuyến mãi hiện tại. Vui lòng liên hệ với quản trị viên."
+
+msgid "Cannot send feedback. Please contact administrator."
+msgstr "Không thể gửi phản hồi. Vui lòng liên hệ với quản trị viên."	
+
+#msgid "This field is required."
+#msgstr "Trường này là bắt buộc."
+
+msgid "This value must be is integer."
+msgstr "Giá trị này phải là số nguyên."
+
+msgid "Card id field is required."
+msgstr "Trường card_id không được bỏ trống."
+
+msgid "Date request is required."
+msgstr "Trường open_date không được bỏ trống."
+
+msgid "Notification Id is required."
+msgstr "Trường notification_id không được bỏ trống."
+
+msgid "Anonymous User Cannot Update Notification."
+msgstr "Người dùng chưa chưa đăng ký không thể cập nhật thông báo."
+
+msgid "Successfull"
+msgstr "Thành công"
+
+msgid "Add Notification Successfull."
+msgstr "Thêm thông báo thành công."
+
+msgid "Cannot add new notification. Please contact administrator."
+msgstr "Không thể thêm thông báo mới. Vui lòng liên hệ với quản trị viên."
+
+msgid "Push Notification Successfull."
+msgstr "Thông báo gởi thành công."
+
+msgid "Cannot push notification. Please contact administrator."
+msgstr "Không thể gởi thông báo. Vui lòng liên hệ với quản trị viên."
+
+
+msgid "KNOW ABOUT HELIO CENTER"
+msgstr "TÌM HIỂU VỀ HELIO CENTER"
+
+msgid "Please check required fields : [old_password, new_password]"
+msgstr "Hãy kiểm tra các trường bắt buộc: [old_password, new_password]."
+
+msgid "This email is already taken. Please, try again"
+msgstr "Địa chỉ email đã tồn tại trong hệ thống. Vui lòng chọn email khác."
+
+msgid "This field may not be blank."
+msgstr "Trường không được bỏ trống."
+
+msgid "Please check required fields : [email, secure_code, password1, password2]"
+msgstr "Các trường sau không được bỏ trống : [email, secure_code, password1, password2]"
+
+msgid "User matching query does not exist."
+msgstr "User không tồn tại."
+
+msgid "Email matching query does not exist."
+msgstr "Email không tồn tại."
+
+msgid "Unable to login with provided credentials."
+msgstr "Email hoặc mật khẩu không chính xác."
+
+msgid "Unable to log in with provided credentials."
+msgstr "Email hoặc mật khẩu không chính xác."
+
+msgid "Error. DeivceID of user is empty. Please check again."
+msgstr "Lỗi. Người dùng hiện tại không có device_id. Vui lòng xác minh lại."
+
+msgid "Email is ready in system. Please choice another email."
+msgstr "Địa chỉ email đã có người sử dụng. Vui lòng sử dụng email khác."
+
+#END API
+
+#START ADMIN MARKETING
+msgid "BACK TO ADMIN NOTIFICATION"
+msgstr "TRỞ VỀ QUẢN LÝ THÔNG BÁO"
+
+msgid "BACK TO ADMIN MANAGEMENT"
+msgstr "TRỞ VỀ TRANG QUẢN TRỊ"
+
+msgid "Send Notification"
+msgstr "Gửi thông báo"
+
+msgid "Notification Management"
+msgstr "Quản lý Thông báo"
+
+msgid "Promotion Management"
+msgstr "Quản lý Khuyến mãi"
+
+
+#END ADMIN MARKETING

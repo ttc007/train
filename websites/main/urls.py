@@ -20,6 +20,12 @@ from django.conf.urls.i18n import i18n_patterns
 from rest_framework_jwt.views import obtain_jwt_token
 from django.conf import settings
 from django.conf.urls.static import static
+from core import forms
+from django.contrib.auth import views
+from django.contrib.admin.sites import AdminSite
+
+# Register Admin Login Form (Custom)
+AdminSite.login_form = forms.SecureAdminLoginForm
 
 handler404 = 'main.views.custom_404'
 handler500 = 'main.views.custom_500'
@@ -28,9 +34,6 @@ urlpatterns = [
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^i18n/', include('django.conf.urls.i18n')),
-    # url(r'^rest-auth/', include('rest_auth.urls')),
-    # url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
-    # url(r'^rest-auth/facebook/$', views.FacebookLogin.as_view(), name='fb_login'),
     url(r'^api-token-auth/', obtain_jwt_token),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),

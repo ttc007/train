@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% load i18n %} 
+{% block title %}Admin Promotions{% endblock %}
+{% block extrastylesheet %}
+	<link href="{{ STATIC_URL }}assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link href="{{ STATIC_URL }}assets/websites/css/admin_notifications.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}assets/websites/css/admin-marketing.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block extrascript %}
+	<script src="{{ STATIC_URL }}assets/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src = "{{ STATIC_URL }}assets/websites/js/admin_notifications.js"></script>
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+	<div class="title-admin">
+		<p class="big-font-size">Notifications Management</h1>
+
+	</div>
+	<div class="col-md-3" align="right">
+			<a class="btn btn-lg btn-primary" href="{% url 'admin_marketing' %}" role="button">{% trans "BACK TO ADMIN MANAGEMENT" %}</a>
+	</div>
+	{% if notifications %}
+	<div class="row">
+		<div class="col-md-12">
+			<div class="table-responsive table-custom">
+				<table id="notifications-table" class="table" width="100%">
+					<thead>
+			            <tr>
+			            	<th>ID</th>
+			            	<th>SUBJECT</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	{% for notification in notifications %}
+            			<tr>
+            				<td class="numeric">{{ notification.id }}</td>
+			            	<td valign="middle"><a class="title-notification" href="{% url 'admin_notification_detail' notification.id %}">{{ notification.subject }}</a></td>
+			            	<td><a class="btn btn-lg btn-primary" href="{% url 'admin_notification_detail' notification.id %}" role="button">{% trans "btn.view_detail" %}</a></td>
+            			</tr>
+            			{% endfor %}
+            		</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+</div>
+
+{% endblock %}

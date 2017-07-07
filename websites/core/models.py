@@ -28,7 +28,7 @@ class DateTimeModel(models.Model):
 
 @python_2_unicode_compatible
 class Post(DateTimeModel):
-    name = models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=255)
     image = models.ImageField(
         max_length=1000, null=True, blank=True, upload_to="posts")
     short_description = models.CharField(max_length=350)
@@ -116,7 +116,7 @@ class Type(models.Model):
     image = models.ImageField(
         max_length=1000, null=True, blank=True, upload_to="types")
     sub_url = models.CharField(max_length=1000)
-    description_game = models.TextField(null=True, blank=True)
+    description_detail = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return '%s' % (self.name)
@@ -231,10 +231,11 @@ class Transaction_Type(DateTimeModel):
 class Gift(DateTimeModel):
     user = models.ForeignKey(custom_models.User)
     promotion = models.ForeignKey(Promotion)
+    device_id = models.CharField(max_length=255, null=True, blank=True)
     is_used = models.BooleanField('Used', default=False)
 
     def __str__(self):
-        return '%s' % (self.user.name)
+        return '%s' % (self.user.email)
 
 
 @python_2_unicode_compatible
@@ -270,3 +271,42 @@ class OpenTime(DateTimeModel):
     class Meta:
         verbose_name = 'Open Time'
         verbose_name_plural = 'Open Time'
+
+
+@python_2_unicode_compatible
+class Notification(DateTimeModel):
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+    image = models.ImageField(max_length=1000, null=True, blank=True)
+    sub_url = models.CharField(max_length=255, null=True, blank=True)
+    category = models.ForeignKey('Category_Notification', related_name='notification_category_rel',
+                                 on_delete=models.CASCADE)
+
+    def __str__(self):
+        return '%s' % (self.subject)
+
+    class Meta:
+        verbose_name = 'Notification'
+        verbose_name_plural = 'Notification'
+
+
+@python_2_unicode_compatible
+class Category_Notification(DateTimeModel):
+    name = models.CharField(max_length=255, unique=True)
+
+    def __str__(self):
+        return '%s' % (self.name)
+
+    class Meta:
+        verbose_name = 'Category Notification'
+        verbose_name_plural = 'Category Notification'
+
+
+@python_2_unicode_compatible
+class User_Notification(DateTimeModel):
+    user = models.ForeignKey(custom_models.User, on_delete=models.CASCADE)
+    notification = models.ForeignKey(Notification, on_delete=models.CASCADE)
+    is_read = models.BooleanField('Is Read', default=False)
+
+    def __str__(self):
+        return '%s' % (self.notification)

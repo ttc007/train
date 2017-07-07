@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% load i18n %} 
+{% block title %}Admin Promotions{% endblock %}
+{% block extrastylesheet %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link href="{{ STATIC_URL }}assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}assets/websites/css/admin-marketing.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block extrascript %}
+	<script src="{{ STATIC_URL }}assets/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src = "{{ STATIC_URL }}assets/websites/js/admin_promotions.js"></script>
+{% endblock %}
+{% block main_content %} 
+
+<div class="container">
+	<div class="admin-main">
+		<div class="title-admin">
+			<p class="big-font-size">Admin Management</h1>
+		</div>
+		<ul>
+			<li><a class="btn btn-lg btn-primary" href="{% url 'admin_notifications' %}" role="button">{% trans "Notification Management" %}</a></li>
+			<li><a class="btn btn-lg btn-primary" href="{% url 'admin_promotions' %}" role="button">{% trans "Promotion Management" %}</a></li>
+		</ul>
+		
+	</div>
+</div>
+
+{% endblock %}

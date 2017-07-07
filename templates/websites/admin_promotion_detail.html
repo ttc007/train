@@ -2,9 +2,10 @@
 {% load i18n %} 
 {% block title %}Admin Promotions{% endblock %}
 {% block extrastylesheet %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 	<link href="{{ STATIC_URL }}assets/css/multi-select.css" media="screen" rel="stylesheet" type="text/css">
 	<link href="{{ STATIC_URL }}assets/websites/css/admin_promotion_detail.css" media="screen" rel="stylesheet" type="text/css">
-	
+	<link href="{{ STATIC_URL }}assets/websites/css/admin-marketing.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 {% block extrascript %}
 	<script src="{{ STATIC_URL }}assets/js/jquery.multi-select.js" type="text/javascript"></script>
@@ -13,22 +14,48 @@
 {% block main_content %} 
 
 <div class="container">
-	<div id="message_success" style="display: none;"><div class="alert alert-success message-success">{% trans "admin_promotion.message_success" %}</div></div>
+	<div class="title-admin">
+		<p class="big-font-size">Promotions Detail Management</h1>
+	</div>
+	<div id="message_success" style="display: none;">
+		<div class="alert alert-success message-success">{% trans "admin_promotion.message_success" %}</div>
+	</div>
+	{% if flag_disable == True %}
+		<div class="alert alert-warning message-warning">{% trans "admin_promotion.message_promotion_install" %}</div>
+	{% endif %}
+	<div class="col-md-12 layer">
+		<a class="btn btn-lg btn-primary" href="{% url 'admin_promotions' %}" role="button">{% trans "admin_promotion.btn_back_admin" %}</a>
+	</div>
+	
+	<br/>
+	
 	{% if promotion %}
 	<div class="row layer">
-		<div class="col-md-9">
+		
+		<div class="col-md-12">
 			<input id="promotion_id" value="{{promotion.id}}" type="hidden" name="promotion_id">
-			<p>ID: {{promotion.id}}</p>
-			<p>NAME: {{promotion.name}}</p>
-		</div>
-		<div class="col-md-3" align="right">
-			<a class="btn btn-custom-style btn-ad-promotion-detail" href="{% url 'admin_promotions' %}" role="button">{% trans "admin_promotion.btn_back_admin" %}</a>
+			<div class="row">
+		        <div class="col-md-1">
+		            <p>ID:</p>
+		        </div>
+		        <div class="col-md-10">
+		            <p><strong class="txt-color">{{promotion.id}}</strong></p>
+		        </div>
+		    </div>
+		    <div class="row">
+		        <div class="col-md-1">
+		            <p>NAME:</p>
+		        </div>
+		        <div class="col-md-10">
+		            <p><strong class="txt-color">{{promotion.name}}</strong></p>
+		        </div>
+		    </div>
 		</div>
 	</div>
 	{% endif %}
-
+	
 	{% if users %}
-	<div class="row layer">
+	<div class="row layer {% if flag_disable == True %} disable_all {% endif %}">
 		<div class="col-md-12">
 			<select multiple="multiple" id="my-select" name="my-select[]" class="user_choose">
 			    {% for user in users %}
@@ -40,9 +67,9 @@
 		</div>
 	</div>
 
-	<div class="row layer">
+	<div class="row layer {% if flag_disable == True %} disable_all {% endif %}">
 		<div class="col-md-12" align="right">
-            <a id ="save-btn" class="btn-view-more btn-custom-style btn-ad-promotion-detail" role="button">{% trans "admin_promotion.btn_save" %}</a>
+            <a id ="save-btn" class="btn btn-lg btn-primary" role="button">{% trans "admin_promotion.btn_save" %}</a>
         </div>
 	</div>
 	{% endif %}

@@ -1,4 +1,8 @@
-{% load i18n %} 
+{% load i18n %}
+<div class="container block-content-20 banner3" >
+    <a href="/helio-introduction/" target="_blank"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
+</div>
+
 <footer id="footer-wrapper">
     <div class="container">
         <div class="row">
@@ -9,7 +13,7 @@
                     </div>
                     <div class="textwidget contact-text">
                        <p><i class="fa fa-phone"></i>(0236) 3 630 888</p>
-                       <p><i class="fa fa-envelope-o"></i>contact@helio.vn</p>
+                       <a href="{% url 'contact' %}" id="email-contact"><p><i class="fa fa-envelope-o"></i>contact@helio.vn</p></a>
                        <p><i class="fa fa-map-marker"></i>{% trans "footer.contact.address" %}</p>
                     </div>
                 </div>
@@ -60,7 +64,7 @@
             </div>
             <div class="col-md-4">
                 <div class="pull-right">
-                    <p class="footer-text">{% trans "footer.text_right" %} <p class="footer-text-color">{% trans "footer.text_company" %}</p></p>
+                    <p class="footer-text">{% trans "footer.text_right" %} <span class="footer-text-color">{% trans "footer.text_company" %}</span></p>
                 </div>
             </div>
         </div>

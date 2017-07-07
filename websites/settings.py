@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import datetime
+import sys
+reload(sys)
 
+sys.setdefaultencoding('utf-8')
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,8 +30,6 @@ SECRET_KEY = '4ygz*y=+@n+gl4!7#b070!+(&g(5uo09&-$crcvp+w^87&%ize'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
-FB_APP_ID = '126726044544310'
 
 
 # Application definition
@@ -53,7 +54,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'multiupload',
-    'captcha'
+    'captcha',
+    'push_notifications'
     
 ]
 
@@ -117,8 +119,7 @@ AUTH_USER_MODEL = 'core.User'
 
 SOCIAL_AUTH_USER_MODEL = 'core.User'
 # Config Social Account
-SOCIAL_AUTH_FACEBOOK_KEY = '295137440610143'
-SOCIAL_AUTH_FACEBOOK_SECRET = '4b4aef291799a7b9aaf016689339e97f'
+
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', ]
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': ','.join([
@@ -219,11 +220,11 @@ LOCALE_PATHS = (
 )
 
 # # config model translation
-gettext = lambda s: s
-LANGUAGES = (
-    ('vi', gettext('Vietnamese')),
-    ('en', gettext('English')),
-)
+# gettext = lambda s: s
+# LANGUAGES = (
+#     ('vi', gettext('Vietnamese')),
+#     ('en', gettext('English')),
+# )
 
 # MODELTRANSLATION_DEFAULT_LANGUAGE = 'vi'
 
@@ -266,7 +267,8 @@ CKEDITOR_CONFIGS = {
                'codesnippetgeshi',
                'placeholder',
                'dialog',
-               'dialogui'
+               'dialogui',
+               'embed',
             ]
         ),
         'font_names': "Yanone Kaffeesatz; Cabin",
@@ -278,11 +280,11 @@ CKEDITOR_BROWSE_SHOW_DIRS = True
 CKEDITOR_IMAGE_BACKEND = "pillow"
 
 DEFAULT_TO_ADMIN_EMAIL = "contact@helio.vn"
-DEFAULT_FROM_EMAIL = "do-not-reply@helio.vn"
+DEFAULT_FROM_EMAIL = "noreply@helio.vn"
 # EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'voocdn@gmail.com'
-EMAIL_HOST_PASSWORD = 'voocP@ssw0rd'
+EMAIL_HOST = 'mail.helio.vn'
+EMAIL_HOST_USER = 'noreply@helio.vn'
+EMAIL_HOST_PASSWORD = 'noreply!@#'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = True
@@ -292,12 +294,23 @@ CODE_LEN = 7 # Default code length
 # Config Google reCaptcha
 NOCAPTCHA = True
 
+PUSH_NOTIFICATIONS_SETTINGS = {
+    "FCM_API_KEY": "AAAAMkND2_U:APA91bEVkDFA8uACGPTTj-Vc86kg4fuyhrPuUmGHJdzkuBaaJh4ZQuc09zMZCEt2xaSj5Xi7opPT9OZHq-hxDrWmqfkRGqRv38uC2nqHHK3Xwy-jwglWoSwIYywpT-qcsoW9TKAsiUayeRAkj_AYJ0AG-D02Ubx0jg",
+    "FCM_ERROR_TIMEOUT": 3600,
+    "APNS_CERTIFICATE": os.path.join(BASE_DIR, "key_apns/pem_production/push_dis.pem"),
+    "APNS_USE_SANDBOX": True,
+    "APNS_TOPIC": "vn.vooc.helio.mobile",
+}
+
 try:
     if 'DEVELOPMENT' in os.environ and os.environ['DEVELOPMENT']:
         from config.setting_local import *
 
     if 'UAT' in os.environ and os.environ['UAT']:
         from config.setting_uat import *
+
+    if 'API_HELIO' in os.environ and os.environ['API_HELIO']:
+        from config.setting_api import *
 
     if 'PRODUCTION' in os.environ and os.environ['PRODUCTION']:
         from config.setting_production import *

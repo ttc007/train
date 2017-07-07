@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 {% load i18n %}
+
+{% block metacontent %}
+    <meta property="og:title" content="{{night_life.name}}" />
+{% endblock %}
+
 {% block title %}Night life - Chợ đêm{% endblock %}
 {% block extrastylesheet %}
 <link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/night_life.css">
@@ -43,9 +48,6 @@
 </div>
 {% endif %}
 <div class="container">
-    <!-- DOWNLOAD APP BANNER -->
-    <div class="app-banner">
-        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
-    </div>
+
 </div>
 {% endblock %}

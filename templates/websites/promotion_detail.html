@@ -1,8 +1,14 @@
 {% extends "layout.html" %}
 {% load i18n %}
-{% block title %}Promotion Detail{% endblock %}
+{% block title %}{{promotion.name}}{% endblock %}
+
+{% block metacontent %}
+    <meta property="og:title" content="{{promotion.name}}" />
+{% endblock %}
+
 {% block extrastylesheet %}
 <link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/page_detail.css">
+
 {% endblock %}
 {% block main_content %} 
 {% if promotion %}

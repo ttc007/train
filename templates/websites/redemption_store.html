@@ -5,9 +5,21 @@
 	<link href="{{ STATIC_URL }}assets/websites/css/redemtion_store.css" rel="stylesheet" type="text/css" />
 	<link href="{{ STATIC_URL }}assets/websites/css/image_section.css" rel="stylesheet" type="text/css" />
 	<link href="{{ STATIC_URL }}assets/websites/css/faqs_section.css" rel="stylesheet" type="text/css" />
+
+
+	<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/slide.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/helio_item.css">
+
 {% endblock %}
 {% block extrascript %}
 	<script src = "{{ STATIC_URL }}assets/websites/js/redemtion_store.js"></script>
+
+
+
+	<script type="text/javascript" src="{{ STATIC_URL }}assets/js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}assets/js/jquery.carousel-1.1.min.js"></script>
+	<!-- <script type="text/javascript" src="{{ STATIC_URL }}assets/websites/js/carouselSlider.js"></script> -->
+
 {% endblock %}
 {% block main_content %} 
 
@@ -91,7 +103,7 @@
 
 	{% if result.list_images %}
 	<!-- CONTENT -->
-	<div class="wrap">
+	<!-- <div class="wrap">
 		{% for item in result.list_images %}
 		<div class="box{{forloop.counter}}">
 			<div class="box-inner">
@@ -99,7 +111,29 @@
 			</div>
 		</div>
 		{% endfor %}
-	</div>
+	</div> -->
+	<div class="tab-content">
+        
+        <div role="tabpanel" class="tab-pane view-more-content active" id="">
+            <!-- Games slider -->
+            <div class="carousel" >
+            </div>
+            <div class="carousel-tmp hidden">
+                <div class="slides"> <!-- BEGIN CAROUSEL -->
+                    {% for item in result.list_images %}
+                    <div class="slideItem"> <!-- SLIDE ITEM -->
+                        <img class="cursor-custom" src="{{ MEDIA_URL }}{{item.image}}">
+                        <!-- <div class="short-description cursor-custom">
+                            <p class="title-content game-name">{{item.name}}</p>
+                            <p class="short_description">{{item.short_description}}</p>
+                        </div> -->
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+    </div>
 	{% endif %}
 
 	<!-- FAQs -->
@@ -116,10 +150,7 @@
 		</div>
 	</div>
 	{% endif %}
-	<!-- DOWNLOAD APP BANNER -->
-	<div class="app-banner">
-		<a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
-	</div>
+	
 </div>
 
 {% endblock %}

@@ -20,7 +20,7 @@
 
 .faqs-section .panel-default>.panel-heading .panel-title,
 .faqs-section .panel-default>.panel-heading .panel-title p {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: bold;
     line-height: 1.11;
     letter-spacing: 1.8px;
@@ -148,7 +148,13 @@ ol.ol-custom ol > li:before {
 }
 
 /*END PANEL CSS*/
+/*Hover questions and margin*/
+.questions:hover {
+    color: #fec231;
+    text-decoration: none;
+ }
 
+/*end hover questions*/
 @media (max-width: 997px) {
     .nav-custom {
         padding: 0 0 20px;

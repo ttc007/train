@@ -29,8 +29,16 @@
                 </a>
             </div>
             {% endfor %}
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
         </div>
-
         <ul class="nav nav-justified home-carousel hidden-sm hidden-xs">
             {% for hot in result.hots %}
             <li data-target="#myCarousel">
@@ -76,9 +84,9 @@
                     <!-- NIGHT LIFT section -->
                     <div class="panel game-section-content row col-md-12">
                         <div class="visible-xs visible-sm game-section-title">
-                            <h2 role = "button" data-toggle="collapse" data-target="#id_night_life" data-parent="#id_game_section">NIGHT LIFE<i class="more-less glyphicon glyphicon-minus"></i></h2>
+                            <h2 role = "button" data-toggle="collapse" data-target="#id_night_life" data-parent="#id_game_section">{% trans "homepage.text.night_life" %}<i class="more-less glyphicon glyphicon-plus"></i></h2>
                         </div>
-                        <div class="collapse in" id="id_night_life">
+                        <div class="collapse" id="id_night_life">
                             {% if result.night_life_types %}
                             <div class="game-section-detail">
                                 <div class="col-xs-12 col-md-6 game-left">
@@ -92,9 +100,21 @@
                                                 <!-- {% trans "homepage.text.night_life.description" %} --></p> 
                                         </div>
                                         <hr>
+                                        <p class="game-description short_description">{{type.description_detail}}</p> 
                                         <!-- <p class="game-description short_description">Hàng ngàn món quà hấp dẫn, lý thú. Helio mang đến cho bạn trải nghiệm Chơi Game - Tích điểm - Đổi quà thực sự thú vị tại quầy đổi quà lớn nhất Việt Nam hiện nay</p>  -->
                                     </div>
                                     {% endfor %}
+                                    <div class="type-group">
+                                        <!-- Night Life Type-->
+                                        <ul class="nav btn-custom-group type-group">
+                                            {% for type in result.night_life_types %}
+                                            <li>
+                                                <a class="btn-custom-style" href="{{type.sub_url}}">{{type.name}}<span class="glyphicon glyphicon-chevron-right"></a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6 game-section-detail">
@@ -112,7 +132,7 @@
                     <!-- PLAY section -->
                     <div class="panel game-section-content row col-md-12">
                         <div class="visible-xs visible-sm game-section-title">
-                            <h2 role = "button" data-toggle="collapse" href="#id_helio_play" data-parent="#id_game_section" class="collapsed">PLAY <i class="more-less glyphicon glyphicon-plus"></i></h2>
+                            <h2 role = "button" data-toggle="collapse" href="#id_helio_play" data-parent="#id_game_section" class="collapsed">{% trans "homepage.text.play" %} <i class="more-less glyphicon glyphicon-plus"></i></h2>
                         </div>
                         <div id="id_helio_play" class="collapse" >
                             {% if result.play_types %}
@@ -125,7 +145,7 @@
                                             <p class="short_description">{{type.description}}</p> 
                                         </div>
                                         <hr>
-                                        <p class="game-description short_description">{{type.description_game}}</p> 
+                                        <p class="game-description short_description">{{type.description_detail}}</p> 
                                     </div>
                                     {% endfor %}
                                     <div class="type-group">
@@ -133,7 +153,7 @@
                                         <ul class="nav btn-custom-group type-group">
                                             {% for type in result.play_types %}
                                             <li>
-                                                <a class="btn-custom-style btn-custom-game-type" href="{{type.sub_url}}">{{type.name}}<span class="glyphicon glyphicon-chevron-right"></a>
+                                                <a class="btn-custom-style" href="{{type.sub_url}}">{{type.name}}<span class="glyphicon glyphicon-chevron-right"></a>
                                             </li>
                                             {% endfor %}
                                         </ul>
@@ -154,7 +174,7 @@
                     <!-- KIDS section -->
                     <div class="panel game-section-content row col-md-12">
                         <div class="visible-xs visible-sm game-section-title">
-                            <h2 role = "button" data-toggle="collapse" href="#id_helio_kids" data-parent="#id_game_section" class="collapsed">KIDS <i class="more-less glyphicon glyphicon-plus"></i></h2>
+                            <h2 role = "button" data-toggle="collapse" href="#id_helio_kids" data-parent="#id_game_section" class="collapsed">{% trans "homepage.text.kids" %} <i class="more-less glyphicon glyphicon-plus"></i></h2>
                         </div>
                         <div class="collapse" id="id_helio_kids">
                             {% if result.kids_types %}
@@ -167,7 +187,7 @@
                                             <p class="short_description">{{type.description}}</p> 
                                         </div>
                                         <hr>
-                                        <p class="game-description short_description">{{type.description_game}}</p> 
+                                        <p class="game-description short_description">{{type.description_detail}}</p> 
                                     </div>
                                     {% endfor %}
                                     <div class="type-group">
@@ -196,7 +216,7 @@
                     <!-- COFFEE section -->
                     <div class="panel game-section-content row col-md-12">
                         <div class="visible-xs visible-sm game-section-title">
-                            <h2 role = "button" data-toggle="collapse" href="#id_helio_coffee" data-parent="#id_game_section" class="collapsed">COFFEE <i class="more-less glyphicon glyphicon-plus"></i></h2>
+                            <h2 role = "button" data-toggle="collapse" href="#id_helio_coffee" data-parent="#id_game_section" class="collapsed">{% trans "homepage.text.coffee" %} <i class="more-less glyphicon glyphicon-plus"></i></h2>
                         </div>
                         <div class="collapse" id="id_helio_coffee">
                             {% if result.coffee_types %}
@@ -276,7 +296,7 @@
                         <p class="big-font-size">HALLOWEEN PARTY</p>
                         <p class="big-font-size">TRUNG THU 2016</p>
                     </div>
-                    <a class="btn btn-custom-style btn-entertaiment" href="{% url 'helio_introduction' %}" role="button">{% trans "btn.click_now" %}</a>
+                    <a class="btn btn-custom-style btn-entertaiment" href="{% url 'helio_introduction' %}" role="button">{% trans "KNOW ABOUT HELIO CENTER" %}</a>
                 </div>
             </div>
             <div class="vidieo-left col-md-9">
@@ -284,10 +304,10 @@
                     <div class="flexslider vidieo-slider">
                         <ul class="slides">
                             <li>
-                                <img src="{{ STATIC_URL }}assets/websites/images/vidieo_1.jpg" />
+                                <img src="{{ STATIC_URL }}assets/websites/images/video3.jpeg" />
                             </li>
                             <li>
-                                <img src="{{ STATIC_URL }}assets/websites/images/vidieo.png" />
+                                <img src="{{ STATIC_URL }}assets/websites/images/videoparty.jpeg" />
                             </li>
                             <li>
                                 <img src="{{ STATIC_URL }}assets/websites/images/vidieo_3.jpg" />
@@ -349,7 +369,7 @@
                     </div>
                     <div class="col-md-2">
                         <div class="event-img">
-                            <img src="{{ MEDIA_URL }}{{event.image}}" alt="helio" width="100%">
+                            <a href="{% url "event_detail" event.id %}"><img src="{{ MEDIA_URL }}{{event.image}}" alt="helio" width="100%"></a>
                         </div>
                         
                     </div>
@@ -363,11 +383,11 @@
 {% endif %}
     
 <!-- BANNER 3 SECTION -->
-{% if result.banners and result.banners.3 %}
+<!-- {% if result.banners and result.banners.3 %}
 <div class="container block-content-20 banner3" >
-    <a href="{{result.banners.3.sub_url}}" target="_blank"><img src="{{ MEDIA_URL }}{{result.banners.3.image}}" width="100%"></a>
+    <a href="{{result.banners.3.sub_url}}" target="_blank"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
 </div>
-{% endif %}
+{% endif %} --> 
 
 <!-- Modal -->
 <div id="vidieo_play_modal" class="modal fade custom-modal" role="dialog">
@@ -386,8 +406,3 @@
 </div>
     
 {% endblock %}
-
-
-
-    
-

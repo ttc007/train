@@ -151,12 +151,12 @@
                                 </label>
                                 <p class="item-name">{{event.name}}</p>
                                 <p class="text-limit-rows item-description short_description">{{event.short_description}}</p>
-                                <a class="btn btn-custom-style btn-custom-style-events" href="/events/{{event.id}}/detail/" role="button">{% trans "btn.click_now" %}<span class="glyphicon glyphicon-menu-right"></span></a>
+                                <a class="btn btn-custom-style btn-custom-style-events" href="{% url 'event_detail' event.id %}" role="button">{% trans "btn.click_now" %}<span class="glyphicon glyphicon-menu-right"></span></a>
                             </div>
                         </div>
                         <div class="item-content-image col-md-9">
                             <div class="row">
-                                <img src="{{ MEDIA_URL }}{{event.image}}" width="100%" height="100%">
+                                <a href="{% url 'event_detail' event.id %}"><img src="{{ MEDIA_URL }}{{event.image}}" width="100%" height="100%"></a>
                                 <div class="countdown-container future-event" style="display: none;">
                                     <div class="countdown-content">
                                         <div class="time days flip">
@@ -198,12 +198,12 @@
                                 </label>
                                 <p class="item-name">{{event.name}}</p>
                                 <p class="text-limit-rows item-description short_description">{{event.short_description}}</p>
-                                <a class="btn btn-custom-style btn-custom-style-events" href="/events/{{event.id}}/detail/" role="button">{% trans "btn.click_now" %}<span class="glyphicon glyphicon-menu-right"></span></a>
+                                <a class="btn btn-custom-style btn-custom-style-events" href="{% url 'event_detail' event.id %}" role="button">{% trans "btn.click_now" %}<span class="glyphicon glyphicon-menu-right"></span></a>
                             </div>
                         </div>
                         <div class="item-content-image col-md-9 ">
                             <div class="row">
-                                <img src="{{ MEDIA_URL }}{{event.image}}" width="100%" height="100%">
+                                <a href="{% url 'event_detail' event.id %}"><img src="{{ MEDIA_URL }}{{event.image}}" width="100%" height="100%"></a>
                                 <div class="countdown-container future-event" style="display: none;">
                                     <div class="countdown-content">
                                         <div class="time days flip">
@@ -239,10 +239,8 @@
     </div>
     {% endif %}
 
-    <!-- DOWNLOAD APP BANNER -->
-    <div class="app-banner">
-        <a href="#"><img src="{{ STATIC_URL }}assets/websites/images/download-app_banner.png" width="100%"></a>
-    </div>
+    
+    
 </div>
 
 {% endblock %}

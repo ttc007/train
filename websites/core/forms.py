@@ -5,6 +5,11 @@ from captcha.fields import ReCaptchaField
 from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.translation import ugettext_lazy
+from django.contrib.auth.forms import AuthenticationForm
+
+
+class SecureAdminLoginForm(AuthenticationForm):
+    captcha = ReCaptchaField(required=True)
 
 
 class ContactForm(forms.Form):
@@ -18,7 +23,8 @@ class ContactForm(forms.Form):
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop("request")
         super(ContactForm, self).__init__(*args, **kwargs)
-        self.fields['captcha'].error_messages = {'required': ugettext_lazy("This field is required.")}
+        self.fields['captcha'].error_messages = {
+            'required': ugettext_lazy("This field is required.")}
 
     def save(self, commit=True):
         name = self.cleaned_data['name']
@@ -29,8 +35,8 @@ class ContactForm(forms.Form):
 
         if commit:
             try:
-            	contact = Contact()
-            	contact.name = name
+                contact = Contact()
+                contact.name = name
                 contact.email = email
                 contact.phone = phone
                 contact.subject = subject
@@ -47,12 +53,12 @@ class ContactForm(forms.Form):
                     "subject": subject,
                     "message": message,
                     'site': get_current_site(self.request),
-                    
+
                 }
 
-                utils.send_mail(subject=subject, message_plain=message_plain, message_html=message_html, 
-                                    email_from=settings.DEFAULT_FROM_EMAIL, email_to=[settings.DEFAULT_TO_ADMIN_EMAIL], data=data_render)
+                utils.send_mail(subject=subject, message_plain=message_plain, message_html=message_html,
+                                email_from=settings.DEFAULT_FROM_EMAIL, email_to=[settings.DEFAULT_TO_ADMIN_EMAIL], data=data_render)
             except Exception, e:
                 print 'Error ', e
-                raise Exception("ERROR : Internal Server Error .Please contact administrator.")
-    
+                raise Exception(
+                    "ERROR : Internal Server Error .Please contact administrator.")

@@ -2,8 +2,10 @@
 {% load i18n %} 
 {% block title %}Admin Promotions{% endblock %}
 {% block extrastylesheet %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 	<link href="{{ STATIC_URL }}assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 	<link href="{{ STATIC_URL }}assets/websites/css/admin_promotions.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}assets/websites/css/admin-marketing.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 {% block extrascript %}
 	<script src="{{ STATIC_URL }}assets/js/jquery.dataTables.min.js"></script>
@@ -12,6 +14,12 @@
 {% block main_content %} 
 
 <div class="container">
+	<div class="title-admin">
+		<p class="big-font-size">Promotions Management</h1>
+	</div>
+	<div class="col-md-3" align="right">
+		<a class="btn btn-lg btn-primary" href="{% url 'admin_marketing' %}" role="button">{% trans "BACK TO ADMIN MANAGEMENT" %}</a>
+	</div>
 	{% if promotions %}
 	<div class="row">
 		<div class="col-md-12">
@@ -27,8 +35,8 @@
 			        	{% for promotion in promotions %}
             			<tr>
             				<td class="numeric">{{ promotion.id }}</td>
-			            	<td valign="middle"><a class="title-promotion" href="/admin-promotions/{{promotion.id}}/detail/">{{ promotion.name }}</a></td>
-			            	<td><a class="btn btn-custom-style btn-link-more btn-custom-ad-promotion" href="/admin-promotions/{{promotion.id}}/detail/" role="button">{% trans "btn.view_detail" %}</a></td>
+			            	<td valign="middle"><a class="title-promotion" href="{% url 'admin_promotion_detail' promotion.id %}">{{ promotion.name }}</a></td>
+			            	<td><a class="btn btn-lg btn-primary" href="{% url 'admin_promotion_detail' promotion.id %}" role="button">{% trans "btn.view_detail" %}</a></td>
             			</tr>
             			{% endfor %}
             		</tbody>

@@ -16,9 +16,15 @@
 	background-color: #b733ad;
     color: #fff;
 }
-.layer a.btn-ad-promotion-detail {
-	font-size: 18px;
-}
 #message_success {
 	margin-top: 20px;
+}
+
+.txt-color{
+    color: #fec231;
+}
+
+.disable_all{
+    pointer-events: none;
+    opacity: 0.8;
 }

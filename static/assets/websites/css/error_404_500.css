@@ -1,9 +1,11 @@
-.page-title-error {
-	font-size: 176px;
-	color: #fff;
+.color-error{
+    color: #fec231;
 }
-.page-content-error {
-	font-size: 50px;
-    color: #fff;
-    margin-top: -40px;
+
+.content-error{
+    margin: 100px 0;
+}
+
+.content-error .detail{
+        margin-bottom: 20px;
 }

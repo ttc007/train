@@ -7,6 +7,9 @@
 .banner3 {
     margin-bottom: 20px;
 }
+
+.carousel-control {display:none;}
+.carousel-inner:hover .carousel-control {display: block;}
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
         width: 100%;
@@ -16,6 +19,7 @@
     height: 193px;
 
 }
+
 .home-carousel li a {
     text-align: left;
     color: #fff;
@@ -91,6 +95,7 @@ div.game-section-menu div.list-group>a.active:after{
     border-left: 20px solid #1eb9f3;
 }
 
+/*He thong vui choi giai tri*/
 div.game-section-menu div.list-group>a.night-life.active{
     background-color: #25bcab;
     background-image: #25bcab;
@@ -100,12 +105,44 @@ div.game-section-menu div.list-group>a.night-life.active:after {
 }
 
 div.game-section-menu div.list-group>a.kids.active{
-    background-color: #fec231;
-    background-image: #fec231;
+    background-color: #dc0784;
+    background-image: #dc0784;
 }
 div.game-section-menu div.list-group>a.kids.active:after {
-    border-left: 20px solid #fec231;
+    border-left: 20px solid #dc0784;
 }
+div.game-section-menu div.list-group>a.play.active{
+    background-color: #00c0f3;
+    background-image: #00c0f3;
+}
+div.game-section-menu div.list-group>a.play.active:after {
+    border-left: 20px solid #00c0f3;
+}
+div.game-section-menu div.list-group>a.coffee.active{
+    background-color: #e2e300;
+    background-image: #e2e300;
+}
+div.game-section-menu div.list-group>a.coffee.active:after {
+    border-left: 20px solid #e2e300;
+}
+div.game-section-menu div.list-group>a.night-life:hover{background-color: #25bcab;}
+div.game-section-menu div.list-group>a.kids:hover{background-color: #dc0784;}
+div.game-section-menu div.list-group>a.play:hover{background-color: #00c0f3;}
+div.game-section-menu div.list-group>a.coffee:hover{background-color: #e2e300;}
+
+/*div.game-section-menu div.list-group>a.night-life:hover:after {
+    border-left: 20px solid #25bcab;
+}
+div.game-section-menu div.list-group>a.kids:hover:after {
+    border-left: 20px solid #dc0784;
+}
+div.game-section-menu div.list-group>a.play:hover:after {
+    border-left: 20px solid #00c0f3;
+}
+div.game-section-menu div.list-group>a.coffee:hover:after {
+    border-left: 20px solid #e2e300;
+}*/
+/*End he thong vui choi giai tri*/
 
 div.game-section-content{
     background-color: #ffffff; 
@@ -208,6 +245,9 @@ a.btn-custom-style.btn-custom-game-type:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.vidieo-list li:hover{
+    cursor:pointer;
 }
 
 .btn-link-more {
@@ -357,7 +397,7 @@ a.btn-custom-style.btn-custom-game-type:hover {
         font-size: 20px;
     }
     div.game-section-content h2 {
-        background-color: #271a3a;
+        background-color: #15062b;
     }
     div.game-section-content h2.collapsed {
         background-color: #15062b;

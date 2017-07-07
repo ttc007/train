@@ -37,4 +37,10 @@ urlpatterns = [
     url(r'^admin-promotions/(?P<promotion_id>[0-9]+)/detail/$', views.admin_promotion_detail, name='admin_promotion_detail'),
     url(r'^update-promotions-user/$', views.update_promotions_user, name='update_promotions_user'),
 
+    url(r'^admin-notifications/$', views.admin_notifications, name='admin_notifications'),
+    url(r'^admin-notifications/(?P<notification_id>[0-9]+)/detail/$', views.admin_notification_detail, name='admin_notification_detail'),
+    url(r'^update-notifications-user/$', views.update_notifications_user, name='update_notifications_user'),
+
+    url(r'^admin-marketing/$', views.admin_marketing, name='admin_marketing'),
+
 ]

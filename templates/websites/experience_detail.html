@@ -1,6 +1,11 @@
 {% extends "layout.html" %}
 {% load i18n %}
-{% block title %}Experience Detail{% endblock %}
+
+{% block metacontent %}
+    <meta property="og:title" content="{{experience.name}}" />
+{% endblock %}
+
+{% block title %}{{experience.name}}{% endblock %}
 {% block extrastylesheet %}
 <link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/page_detail.css">
 {% endblock %}

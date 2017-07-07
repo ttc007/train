@@ -1,6 +1,7 @@
  <!-- FAQs -->
 {% if result.faqs %}
 <div class="faqs-content">
+
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		{% for faq in result.faqs %}
         <div class="panel panel-default faq-detail">
@@ -9,7 +10,7 @@
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{faq.id}}" aria-expanded="true" aria-controls="collapse_{{faq.id}}">
                         <i class="more-less fa fa-chevron-circle-down"></i>
                     </a>
-                    <p>{{faq.question}}</p>
+                    <a  class="questions" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{faq.id}}" aria-expanded="true" aria-controls="collapse_{{faq.id}}" title="{{faq.answer}}">{{faq.question}}</a>
                 </h4>
             </div>
             <div id="collapse_{{faq.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_{{faq.id}}">

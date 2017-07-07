@@ -1,6 +1,11 @@
 {% extends "layout.html" %}
 {% load i18n %}
-{% block title %}News Detail{% endblock %}
+
+{% block metacontent %}
+    <meta property="og:title" content="{{new.name}}" />
+{% endblock %}
+
+{% block title %}{{new.name}}{% endblock %}
 {% block extrastylesheet %}
 <link rel="stylesheet" href="{{ STATIC_URL }}assets/websites/css/page_detail.css">
 {% endblock %}

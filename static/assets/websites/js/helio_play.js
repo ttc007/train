@@ -47,7 +47,8 @@ var PlayFunction = (function ($) {
                 frontHeight:h,
                 hMargin: 0.3,
                 vMargin: 0.8,
-                short_description: true
+                short_description: true,
+                mouse:false
             });
             $(element).find(".prevButton").css('top', h_bw + 'px');
             $(element).find(".nextButton").css('top', h_bw + 'px');
